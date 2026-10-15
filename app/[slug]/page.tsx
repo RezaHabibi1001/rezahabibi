@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import JsonLd from "@/components/JsonLd";
 import ProjectArt from "@/components/ProjectArt";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/content/site";
+import { breadcrumbSchema, caseStudySchema, graph } from "@/lib/schema";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -13,7 +16,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
-  return p ? { title: `${p.title} at ${p.company}`, description: p.blurb } : {};
+  if (!p) return {};
+  return pageMetadata({
+    title: `${p.title} at ${p.company}`,
+    description: `Case study: ${p.blurb}`,
+    path: `/${p.slug}`,
+    type: "article",
+    keywords: [...p.stack, p.company, "case study"],
+  });
 }
 
 const i = (n: number) => ({ "--i": n }) as CSSProperties;
@@ -34,7 +44,17 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
   ];
 
   return (
-    <main>
+    <main id="main">
+      <JsonLd
+        data={graph(
+          caseStudySchema(p),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Work", path: "/work" },
+            { name: p.title, path: `/${p.slug}` },
+          ]),
+        )}
+      />
       {/* Hero */}
       <section className="mx-auto w-full max-w-[1440px] px-5 pt-4 sm:px-10 sm:pt-8">
         <div className="overflow-hidden rounded-[28px]" style={{ background: p.bg, color: p.ink }}>

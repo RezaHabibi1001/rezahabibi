@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import { awards, certifications, education, experience, site } from "@/content/site";
+import { breadcrumbSchema, educationCredential, graph, profilePageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: `Resume — ${site.role}`,
-  description: site.summary,
-};
+  description: `Resume of ${site.name}, ${site.role.toLowerCase()}: Hindukosh-Bridge, Microcis and Berang Technology, Computer Science at Herat University, and skills in NestJS, GraphQL, Redis and Mediasoup.`,
+  path: "/resume",
+  type: "profile",
+  keywords: ["resume", "CV", "backend developer resume"],
+});
 
 const i = (n: number) => ({ "--i": n }) as CSSProperties;
 
@@ -21,7 +27,17 @@ function Block({ title, children, index = 0 }: { title: string; children: React.
 
 export default function ResumePage() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-5 pb-24 pt-10 sm:px-10 sm:pt-16">
+    <main id="main" className="mx-auto w-full max-w-[1100px] px-5 pb-24 pt-10 sm:px-10 sm:pt-16">
+      <JsonLd
+        data={graph(
+          profilePageSchema("/resume", `Resume — ${site.name}`),
+          educationCredential(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Resume", path: "/resume" },
+          ]),
+        )}
+      />
       <header className="rise flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 style={i(0)} className="font-serif text-5xl text-head sm:text-6xl">

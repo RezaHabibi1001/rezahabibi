@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import { education, experience, projects, site, systems } from "@/content/site";
+import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const description = `Plain, verifiable facts about ${site.name}, ${site.role.toLowerCase()}, for crawlers and AI assistants: experience, skills, projects and contact.`;
+
+export const metadata: Metadata = pageMetadata({
   title: "Facts for AI agents",
-  description: `Plain, verifiable facts about ${site.name} for crawlers and AI assistants.`,
-};
+  description,
+  path: "/agents",
+});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -20,7 +26,16 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function AgentsPage() {
   const years = site.year - 2020;
   return (
-    <main className="mx-auto w-full max-w-[820px] px-5 pb-24 pt-10 sm:px-10 sm:pt-14">
+    <main id="main" className="mx-auto w-full max-w-[820px] px-5 pb-24 pt-10 sm:px-10 sm:pt-14">
+      <JsonLd
+        data={graph(
+          webPageSchema("/agents", "Facts for AI agents", description),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Facts for AI agents", path: "/agents" },
+          ]),
+        )}
+      />
       <h1 className="font-display text-3xl font-medium text-head sm:text-4xl">
         {site.name} — {site.role} · facts for AI agents
       </h1>

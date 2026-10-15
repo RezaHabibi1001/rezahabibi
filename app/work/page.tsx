@@ -2,20 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import JsonLd from "@/components/JsonLd";
 import ProjectGrid from "@/components/ProjectGrid";
 import Reveal from "@/components/Reveal";
-import { about, playground, site } from "@/content/site";
+import { about, playground, projects, site } from "@/content/site";
+import { breadcrumbSchema, collectionSchema, graph } from "@/lib/schema";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Work: backend case studies",
-  description: `Case studies and experiments by ${site.name}, ${site.role}.`,
-};
+  description: `Backend case studies by ${site.name}: video encoding and live streaming, a Mediasoup real-time media server, and e-commerce and accounting APIs built with Node.js and NestJS.`,
+  path: "/work",
+  keywords: ["backend case study", "API design", "system design"],
+});
 
 const i = (n: number) => ({ "--i": n }) as CSSProperties;
 
 export default function WorkPage() {
   return (
-    <main>
+    <main id="main">
+      <JsonLd
+        data={graph(
+          collectionSchema("/work", "Work", projects),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Work", path: "/work" },
+          ]),
+        )}
+      />
       <section className="mx-auto w-full max-w-[1440px] px-5 pt-10 sm:px-10 sm:pt-16">
         <div className="rise">
           <h1 style={i(0)} className="font-serif text-5xl text-head sm:text-7xl">
