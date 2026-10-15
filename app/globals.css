@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
 :root {
+  /* motion */
+  --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-enter-soft: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-morph: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-quick: 0.2s;
+  --dur-standard: 0.4s;
+  --dur-slow: 0.65s;
+
+  /* color */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --color-accent: #e45684;
+  --color-brand-blue: #2e71f1;
+  --color-footer: #1c7cf5;
+  --color-ink: #202020;
+  --color-head-ink: #101010;
+  --color-body-ink: #000000;
+  --color-muted: #727a86;
+  --color-faint: #aeb4be;
+  --color-line: #eef0f3;
+  --color-hero-bg: #fcf9f8;
+  --color-pill-bg: #e0eefd;
+  --color-pill-ink: #2e71f1;
+  --color-fun-bg: #202124;
+  --color-fun-ink: #303030;
+  --color-surface: #f7f9fc;
+  --color-terminal: #16181d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--color-accent);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-hero: var(--color-hero-bg);
+  --color-pill: var(--color-pill-bg);
+  --color-pill-ink: var(--color-pill-ink);
+  --color-footer: var(--color-footer);
+  --color-brand: var(--color-brand-blue);
+  --color-head: var(--color-head-ink);
+  --color-faint: var(--color-faint);
+  --color-line: var(--color-line);
+  --color-fun: var(--color-fun-bg);
+  --color-surface: var(--color-surface);
+  --color-terminal: var(--color-terminal);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-instrument);
+  --font-ui: var(--font-inter);
+  --ease-enter: var(--ease-enter);
+  --ease-exit: var(--ease-exit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-instrument), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* ---------- load-in: hero children rise one after another ---------- */
+.rise > * {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise var(--dur-slow) var(--ease-enter) forwards;
+  animation-delay: calc(var(--i, 0) * 80ms + 120ms);
+}
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- scroll reveal: .seq gets .in from <Reveal> ---------- */
+.seq {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--dur-slow) var(--ease-enter),
+    transform var(--dur-slow) var(--ease-enter);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.seq.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- cards ---------- */
+.card {
+  transition: transform var(--dur-quick) var(--ease-exit),
+    box-shadow var(--dur-quick) var(--ease-exit);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.35);
+  transition-timing-function: var(--ease-enter);
+  transition-duration: var(--dur-standard);
+}
+.card .card-art {
+  transition: transform var(--dur-standard) var(--ease-enter);
+}
+.card:hover .card-art {
+  transform: scale(1.03);
+}
+.arrow {
+  display: inline-block;
+  transition: transform var(--dur-standard) var(--ease-enter);
+}
+a:hover .arrow,
+button:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- assistant pill ---------- */
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  12% { transform: scale(1.12); }
+  24% { transform: scale(1); }
+  36% { transform: scale(1.08); }
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+@keyframes ring {
+  0% { box-shadow: 0 0 0 0 rgb(46 113 241 / 0.4); }
+  100% { box-shadow: 0 0 0 12px rgb(46 113 241 / 0); }
+}
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+@keyframes think {
+  0%, 80%, 100% { opacity: 0.25; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+.beat { animation: beat 2.4s var(--ease-morph) infinite; }
+.caret { animation: blink 1s steps(1) infinite; }
+.ring { animation: ring 2s var(--ease-enter-soft) infinite; }
+.nudge { animation: nudge 1.6s var(--ease-morph) infinite; }
+.think span { display: inline-block; animation: think 1.2s infinite; }
+.think span:nth-child(2) { animation-delay: 0.15s; }
+.think span:nth-child(3) { animation-delay: 0.3s; }
+
+/* ---------- modal ---------- */
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes modal-out {
+  to { opacity: 0; transform: translateY(4px) scale(0.98); }
+}
+@keyframes backdrop-in { from { opacity: 0; } }
+@keyframes backdrop-out { to { opacity: 0; } }
+.modal-open { animation: modal-in var(--dur-standard) var(--ease-enter) both; }
+.modal-close { animation: modal-out var(--dur-quick) var(--ease-exit) both; }
+.backdrop-open { animation: backdrop-in var(--dur-standard) var(--ease-enter) both; }
+.backdrop-close { animation: backdrop-out var(--dur-quick) var(--ease-exit) both; }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise > *, .seq {
+    transform: none !important;
+    animation-duration: 1ms !important;
+  }
+  .beat, .caret, .ring, .nudge, .think span { animation: none !important; }
+  .card:hover, .card:hover .card-art { transform: none; }
+}
+
+/* ---------- hero log ---------- */
+.log-new { animation: rise var(--dur-standard) var(--ease-enter) both; opacity: 0; transform: translateY(6px); }
+@media (prefers-reduced-motion: reduce) { .log-new { animation: none; opacity: 1; transform: none; } }
