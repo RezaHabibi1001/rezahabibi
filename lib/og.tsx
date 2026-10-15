@@ -7,8 +7,8 @@ export const OG_SIZE = { width: 1200, height: 630 };
 
 let portrait: Promise<string> | null = null;
 const portraitDataUrl = () =>
-  (portrait ??= readFile(path.join(process.cwd(), "assets", "og-portrait.png")).then(
-    (b) => `data:image/png;base64,${b.toString("base64")}`,
+  (portrait ??= readFile(path.join(process.cwd(), "assets", "og-portrait.jpeg")).then(
+    (b) => `data:image/jpeg;base64,${b.toString("base64")}`,
   ));
 
 type Card = {

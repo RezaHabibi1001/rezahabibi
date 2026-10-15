@@ -56,7 +56,7 @@ await writeFile(out("public", "icon-192.png"), await png(mark(), 192));
 await writeFile(out("public", "icon-512.png"), await png(mark(), 512));
 await writeFile(out("public", "icon-maskable-512.png"), await png(mark(72, false), 512));
 
-// Satori (next/og) cannot read WebP, so keep a PNG copy of the portrait for OG images.
-await sharp(out("public", "portrait.webp")).resize(560).png({ compressionLevel: 9 }).toFile(out("assets", "og-portrait.png"));
+// Satori (next/og) cannot read WebP, so keep a JPEG copy of the portrait for OG images.
+await sharp(out("public", "portrait.webp")).resize(560).jpeg({ quality: 90 }).toFile(out("assets", "og-portrait.jpeg"));
 
 console.log("icons generated");
