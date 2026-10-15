@@ -9,7 +9,7 @@ import { collectionSchema, graph, profilePageSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  description: `${site.name} is a ${site.role.toLowerCase()} in ${site.location} with 5+ years building Node.js and NestJS APIs, real-time Mediasoup media servers and video encoding pipelines.`,
+  description: `${site.name} is a ${site.role.toLowerCase()} in ${site.location} with 6+ years building Node.js and NestJS APIs, real-time Mediasoup media servers and video encoding pipelines.`,
   path: "/",
   type: "profile",
 });

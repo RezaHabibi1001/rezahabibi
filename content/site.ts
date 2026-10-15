@@ -37,7 +37,7 @@ export const site = {
   phoneHref: "+93796146514",
   url: "https://rezahabibi.dev", // PLACEHOLDER: production domain
   summary:
-    "Backend developer with 5+ years building scalable APIs, real-time media servers and video pipelines with Node.js and NestJS.",
+    "Backend developer with 6+ years building scalable APIs, real-time media servers and video pipelines with Node.js and NestJS.",
   intro:
     "I build the backend that keeps products fast and reliable: clean REST and GraphQL APIs, real-time media with Mediasoup, and video encoding pipelines. Currently at Hindukosh-Bridge. Computer Science graduate, Herat University.",
   socials: [
@@ -72,7 +72,8 @@ export const projects: Project[] = [
     bg: "#f6e8cd",
     ink: "#5c4304",
     art: "film",
-    headline: "A video platform where uploads, encodes and live streams share one backend.",
+    headline:
+      "A video platform where uploads, encodes and live streams share one backend.",
     overview:
       "Hindukosh-Bridge runs a movie catalogue and live streaming product. I work on the backend services behind it: the catalogue API, the live streaming services and the pipeline that turns uploaded files into stream-ready video.",
     goals: [
@@ -120,7 +121,8 @@ export const projects: Project[] = [
     bg: "#def4f0",
     ink: "#1c601c",
     art: "stream",
-    headline: "Live streams that stay live: a Mediasoup media server built for low latency.",
+    headline:
+      "Live streams that stay live: a Mediasoup media server built for low latency.",
     overview:
       "At Microcis I built and maintained the media server behind the company's live streaming features, together with the REST and GraphQL APIs that rooms, users and sessions run on.",
     goals: [
@@ -168,7 +170,8 @@ export const projects: Project[] = [
     bg: "#e8edfd",
     ink: "#2a34c6",
     art: "commerce",
-    headline: "Online shops and a local accounting system on one clean, secure API foundation.",
+    headline:
+      "Online shops and a local accounting system on one clean, secure API foundation.",
     overview:
       "Berang Technology built online stores for carpet sellers and retail shops, plus an accounting system for local businesses. I developed and maintained the backend services for these products.",
     goals: [
@@ -290,7 +293,8 @@ export const education = {
 };
 
 // Optional resume sections. Empty arrays are hidden.
-export const certifications: { title: string; issuer: string; year: string }[] = [];
+export const certifications: { title: string; issuer: string; year: string }[] =
+  [];
 export const awards: { title: string; year: string }[] = [];
 
 // Canned answers for the assistant (no external AI call).

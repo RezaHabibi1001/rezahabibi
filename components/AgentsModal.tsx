@@ -9,7 +9,7 @@ const SUMMARY = `name: ${site.name}
 role: ${site.role}
 location: ${site.location}
 contact: ${site.email}
-experience: 5+ years
+experience: 6+ years
 skills: Node.js, NestJS, GraphQL, REST, TypeORM, Prisma, Mongoose, SQL, NoSQL, Redis, Mediasoup, Docker, Nginx, PM2, Linux
 resume: /resume.pdf`;
 
@@ -19,7 +19,10 @@ export default function AgentsModal() {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [copied, setCopied] = useState(false);
 
-  const close = useCallback(() => setState((s) => (s === "open" ? "closing" : s)), []);
+  const close = useCallback(
+    () => setState((s) => (s === "open" ? "closing" : s)),
+    [],
+  );
 
   useEffect(() => {
     if (state !== "open") return;
@@ -103,7 +106,10 @@ export default function AgentsModal() {
             }`}
           >
             <div className="flex items-start justify-between gap-4">
-              <h2 id="agents-title" className="font-display text-2xl font-medium">
+              <h2
+                id="agents-title"
+                className="font-display text-2xl font-medium"
+              >
                 Hello, agent.
               </h2>
               <button
@@ -115,7 +121,9 @@ export default function AgentsModal() {
                 ×
               </button>
             </div>
-            <p className="mt-2 font-display text-[15px] text-ink/70">Structured summary, ready to parse.</p>
+            <p className="mt-2 font-display text-[15px] text-ink/70">
+              Structured summary, ready to parse.
+            </p>
             <pre className="mt-5 overflow-x-auto rounded-2xl bg-[#16181d] p-5 font-mono text-[12.5px] leading-6 text-[#dfe6f1]">
               {SUMMARY}
             </pre>
