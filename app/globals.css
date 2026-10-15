@@ -177,6 +177,7 @@ button:hover .arrow {
   .card:hover, .card:hover .card-art { transform: none; }
 }
 
-/* ---------- hero log ---------- */
+
+/* ---------- new chat message ---------- */
 .log-new { animation: rise var(--dur-standard) var(--ease-enter) both; opacity: 0; transform: translateY(6px); }
 @media (prefers-reduced-motion: reduce) { .log-new { animation: none; opacity: 1; transform: none; } }

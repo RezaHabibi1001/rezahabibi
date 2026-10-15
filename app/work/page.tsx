@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
@@ -56,8 +57,15 @@ export default function WorkPage() {
       <section className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-28 sm:px-10 sm:pt-32">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <Reveal>
-            <div className="grid aspect-[4/5] max-w-sm place-items-center rounded-[28px] bg-hero">
-              <span className="font-serif text-[120px] leading-none text-accent">{site.monogram}</span>
+            <div className="flex aspect-[4/5] max-w-sm items-end overflow-hidden rounded-[28px] bg-hero px-6 pt-10">
+              <Image
+                src="/portrait.webp"
+                alt={`Portrait of ${site.name}`}
+                width={640}
+                height={626}
+                sizes="(min-width: 1024px) 384px, 90vw"
+                className="block h-auto w-full"
+              />
             </div>
           </Reveal>
           <Reveal index={1} className="flex flex-col gap-5">
