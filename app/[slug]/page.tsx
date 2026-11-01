@@ -90,7 +90,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
 
       {/* Intro */}
       <section className="mx-auto w-full max-w-[1100px] px-5 pt-20 sm:px-10 sm:pt-28">
-        <Reveal as="h2" className="font-serif text-4xl text-head sm:text-5xl">
+        <Reveal as="h2" className="text-gradient font-serif text-4xl sm:text-5xl">
           Intro
         </Reveal>
         <div className="mt-10 flex flex-col divide-y divide-line">
@@ -122,7 +122,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
           {p.decisions.map((d, k) => (
             <Reveal key={d.title}>
               <article
-                className={`grid items-center gap-8 overflow-hidden rounded-[24px] bg-surface p-6 sm:p-10 lg:grid-cols-2 lg:gap-14 ${
+                className={`decision-card grid items-center gap-8 overflow-hidden rounded-[24px] p-6 sm:p-10 lg:grid-cols-2 lg:gap-14 ${
                   k % 2 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
@@ -145,7 +145,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
       {/* Closing + next project */}
       <section className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-20 sm:px-10 sm:pt-28">
         <Reveal className="max-w-3xl">
-          <h3 className="font-serif text-3xl text-head sm:text-4xl">{p.closing.title}</h3>
+          <h3 className="text-gradient font-serif text-3xl sm:text-4xl">{p.closing.title}</h3>
           <p className="mt-4 font-display text-[16px] leading-relaxed text-ink/75">{p.closing.text}</p>
         </Reveal>
         <Reveal className="mt-14">

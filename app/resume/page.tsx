@@ -40,23 +40,24 @@ export default function ResumePage() {
       />
       <header className="rise flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 style={i(0)} className="font-serif text-5xl text-head sm:text-6xl">
+          <h1 style={i(0)} className="text-gradient font-serif text-5xl sm:text-6xl">
             {site.name}
           </h1>
-          <h2 style={i(1)} className="mt-2 font-display text-2xl font-medium text-accent">
+          <h2 style={i(1)} className="text-gradient-primary mt-2 font-display text-2xl font-medium">
             {site.role}
           </h2>
           <p style={i(2)} className="mt-4 font-ui text-sm text-muted">
-            {site.location} · <a href={`mailto:${site.email}`} className="hover:text-ink">{site.email}</a> ·{" "}
-            <a href={`tel:${site.phoneHref}`} className="hover:text-ink">{site.phone}</a>
+            {site.location} ·{" "}
+            <a href={`mailto:${site.email}`} className="transition-colors duration-200 hover:text-primary">
+              {site.email}
+            </a>{" "}
+            ·{" "}
+            <a href={`tel:${site.phoneHref}`} className="transition-colors duration-200 hover:text-primary">
+              {site.phone}
+            </a>
           </p>
         </div>
-        <a
-          style={i(3)}
-          href="/resume.pdf"
-          download
-          className="w-fit rounded-full bg-head px-6 py-3 font-ui text-sm font-medium text-white transition-transform duration-200 hover:scale-[1.03]"
-        >
+        <a style={i(3)} href="/resume.pdf" download className="btn btn-primary w-fit">
           Download PDF <span className="arrow">&darr;</span>
         </a>
       </header>

@@ -4,10 +4,10 @@ import Reveal from "./Reveal";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer text-white">
+    <footer className="site-footer text-white">
       <div className="mx-auto w-full max-w-[1440px] px-5 pb-12 pt-20 sm:px-10 sm:pt-28">
         <Reveal className="flex flex-col gap-2">
-          <p className="font-serif text-4xl sm:text-6xl">{site.name}</p>
+          <p className="text-gradient-light font-serif text-4xl sm:text-6xl">{site.name}</p>
           <p className="font-display text-lg text-white/75">{site.role}</p>
           <p className="font-display text-lg text-white/75">{site.location}</p>
         </Reveal>
@@ -18,11 +18,11 @@ export default function Footer() {
           </p>
           <a
             href={`mailto:${site.email}`}
-            className="mt-6 inline-block font-display text-2xl font-medium underline decoration-white/30 underline-offset-8 transition-colors duration-200 hover:decoration-accent sm:text-3xl"
+            className="mt-6 inline-block font-display text-2xl font-medium underline decoration-white/30 underline-offset-8 transition-colors duration-200 hover:text-accent-soft hover:decoration-accent-soft sm:text-3xl"
           >
             {site.email}
           </a>
-          <a href={`tel:${site.phoneHref}`} className="mt-3 block font-display text-lg text-white/80 hover:text-white">
+          <a href={`tel:${site.phoneHref}`} className="mt-3 block font-display text-lg text-white/80 hover:text-accent-soft">
             {site.phone}
           </a>
         </Reveal>
@@ -32,7 +32,7 @@ export default function Footer() {
             {site.socials.map((s, k) => (
               <li key={s.label} className="flex items-center gap-3">
                 {k > 0 && <span className="text-white/30">|</span>}
-                <a href={s.href} className="transition-opacity duration-200 hover:opacity-70">
+                <a href={s.href} className="transition-colors duration-200 hover:text-accent-soft">
                   {s.label}
                 </a>
               </li>

@@ -3,23 +3,23 @@ import { site } from "@/content/site";
 
 export default function Header() {
   return (
-    <header className="relative z-40 bg-white">
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-5 sm:px-10">
         <Link
           href="/"
-          className="font-serif text-2xl text-ink transition-opacity duration-200 hover:opacity-60"
+          className="font-serif text-2xl transition-opacity duration-200 hover:opacity-75"
           aria-label={`${site.name} home`}
         >
-          {site.monogram}
+          <span className="text-gradient">{site.monogram}</span>
         </Link>
-        <ul className="flex items-center gap-6 font-ui text-sm text-ink">
+        <ul className="flex items-center gap-7 font-ui text-sm font-medium">
           <li>
-            <Link href="/work" className="transition-colors duration-200 hover:text-accent">
+            <Link href="/work" className="nav-link">
               Work
             </Link>
           </li>
           <li>
-            <Link href="/resume" className="transition-colors duration-200 hover:text-accent">
+            <Link href="/resume" className="nav-link">
               Resume
             </Link>
           </li>

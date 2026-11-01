@@ -83,7 +83,7 @@ export default function AgentsModal() {
         ref={triggerRef}
         type="button"
         onClick={() => setState("open")}
-        className="font-ui text-sm font-semibold uppercase tracking-[0.12em] transition-opacity duration-200 hover:opacity-70"
+        className="font-ui text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-200 hover:text-primary-soft"
       >
         For agents?
       </button>
@@ -131,7 +131,7 @@ export default function AgentsModal() {
               <button
                 type="button"
                 onClick={copy}
-                className="rounded-full bg-accent px-5 py-2.5 font-medium text-white transition-transform duration-200 hover:scale-[1.03]"
+                className="btn btn-primary"
               >
                 {copied ? "Copied" : "Copy summary"}
               </button>

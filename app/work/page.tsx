@@ -32,15 +32,18 @@ export default function WorkPage() {
       />
       <section className="mx-auto w-full max-w-[1440px] px-5 pt-10 sm:px-10 sm:pt-16">
         <div className="rise">
+          <span style={i(0)} className="eyebrow">
+            Case studies
+          </span>
           <h1
-            style={i(0)}
-            className="font-serif text-5xl text-head sm:text-7xl"
+            style={i(1)}
+            className="text-gradient mt-3 font-serif text-5xl sm:text-7xl"
           >
             Work
           </h1>
           <p
-            style={i(1)}
-            className="mt-4 max-w-2xl font-display text-lg leading-relaxed text-ink/70"
+            style={i(2)}
+            className="mt-4 max-w-2xl font-display text-lg leading-relaxed text-ink/75"
           >
             Backend systems for commerce, accounting, real-time media and video.
             Each case study covers the problem, the approach and the decisions
@@ -53,12 +56,13 @@ export default function WorkPage() {
 
       {/* Fun time */}
       <section className="mx-auto mt-24 w-full max-w-[1440px] px-5 sm:px-10">
-        <div className="rounded-[28px] bg-fun px-6 py-14 text-white sm:px-12 sm:py-20">
+        <div className="fun-panel rounded-[28px] px-6 py-14 text-white sm:px-12 sm:py-20">
           <Reveal className="flex flex-col gap-3">
+            <span className="eyebrow eyebrow-light">Playground</span>
             <h2 className="font-display text-3xl font-medium sm:text-4xl">
               My fun time
             </h2>
-            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-white/65">
+            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-white/70">
               Small experiments I run to learn something properly, outside
               client work.
             </p>
@@ -90,19 +94,24 @@ export default function WorkPage() {
       <section className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-28 sm:px-10 sm:pt-32">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <Reveal>
-            <div className="flex aspect-[4/5] max-w-sm items-end overflow-hidden rounded-[28px] bg-hero px-6 pt-10">
+            <div className="hero-panel relative flex aspect-[4/5] max-w-sm items-end overflow-hidden rounded-[28px]">
+              <div
+                className="absolute bottom-0 left-1/2 h-2/3 w-2/3 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"
+                aria-hidden
+              />
               <Image
                 src="/og-portrait.jpeg"
                 alt={`Portrait of ${site.name}`}
                 width={640}
                 height={626}
                 sizes="(min-width: 1024px) 384px, 90vw"
-                className="block h-auto w-full"
+                className="relative block h-auto w-full px-6 pt-10 drop-shadow-[0_24px_40px_rgba(49,46,129,0.14)]"
               />
             </div>
           </Reveal>
           <Reveal index={1} className="flex flex-col gap-5">
-            <h2 className="font-display text-3xl font-medium text-head sm:text-4xl">
+            <span className="eyebrow">About</span>
+            <h2 className="text-gradient font-display text-3xl font-medium sm:text-4xl">
               About me
             </h2>
             {about.map((t) => (
@@ -115,7 +124,7 @@ export default function WorkPage() {
             ))}
             <Link
               href="/resume"
-              className="font-ui text-sm font-semibold text-accent"
+              className="font-ui text-sm font-semibold text-accent transition-colors duration-200 hover:text-primary"
             >
               Read my resume <span className="arrow">&rarr;</span>
             </Link>

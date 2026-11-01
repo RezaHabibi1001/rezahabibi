@@ -15,15 +15,18 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
           <span className="shrink-0">{project.period}</span>
         </div>
         <h3 className="font-display text-2xl font-medium leading-tight sm:text-[28px]">{project.title}</h3>
-        <p className="max-w-lg font-display text-[15px] leading-relaxed text-ink/75">{project.blurb}</p>
+        <p className="max-w-lg font-display text-[15px] leading-relaxed opacity-80">{project.blurb}</p>
         <ul className="mt-1 flex flex-wrap gap-2">
           {project.stack.map((s) => (
-            <li key={s} className="rounded-full bg-white/60 px-3 py-1 font-ui text-xs font-medium">
+            <li
+              key={s}
+              className="rounded-full bg-white/65 px-3 py-1 font-ui text-xs font-medium ring-1 ring-black/5 backdrop-blur-sm"
+            >
               {s}
             </li>
           ))}
         </ul>
-        <span className="mt-2 font-ui text-sm font-semibold">
+        <span className="mt-2 inline-flex items-center gap-1 font-ui text-sm font-semibold">
           View case study <span className="arrow">&rarr;</span>
         </span>
       </div>

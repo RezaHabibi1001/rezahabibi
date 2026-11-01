@@ -7,8 +7,8 @@ import sharp from "sharp";
 const root = path.resolve(import.meta.dirname, "..");
 const out = (...p) => path.join(root, ...p);
 
-const BG = "#202020";
-const DOT = "#e45684";
+const BG = "#111827";
+const DOT = "#d97706";
 
 // Rounded square with a serif "R" and an accent dot. `pad` shrinks the mark for maskable icons.
 const mark = (pad = 0, rounded = true) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

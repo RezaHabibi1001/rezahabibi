@@ -21,11 +21,11 @@ type Card = {
 };
 
 /** Shared 1200x630 social card used by every opengraph-image / twitter-image route. */
-export async function renderOg({ eyebrow, title, subtitle, bg = "#fcf9f8", ink = "#e45684", withPortrait = true }: Card) {
+export async function renderOg({ eyebrow, title, subtitle, bg = "#f4f5fd", ink = "#4338ca", withPortrait = true }: Card) {
   const img = withPortrait ? await portraitDataUrl() : null;
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#ffffff", padding: 40 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#fcfcfe", padding: 40 }}>
         <div
           style={{
             flex: 1,
@@ -49,22 +49,22 @@ export async function renderOg({ eyebrow, title, subtitle, bg = "#fcf9f8", ink =
               {eyebrow}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-              <div style={{ display: "flex", fontSize: title.length > 48 ? 54 : 66, lineHeight: 1.1, color: "#101010" }}>
+              <div style={{ display: "flex", fontSize: title.length > 48 ? 54 : 66, lineHeight: 1.1, color: "#0f172a" }}>
                 {title}
               </div>
               {subtitle ? (
-                <div style={{ display: "flex", fontSize: 28, lineHeight: 1.35, color: "#202020", opacity: 0.75 }}>
+                <div style={{ display: "flex", fontSize: 28, lineHeight: 1.35, color: "#334155", opacity: 0.85 }}>
                   {subtitle}
                 </div>
               ) : null}
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, color: "#202020" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, color: "#1f2937" }}>
               <div
                 style={{
                   width: 52,
                   height: 52,
                   borderRadius: 14,
-                  background: "#202020",
+                  background: "#111827",
                   color: "#fff",
                   display: "flex",
                   alignItems: "center",

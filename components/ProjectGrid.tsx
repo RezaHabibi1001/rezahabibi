@@ -5,8 +5,9 @@ import Reveal from "./Reveal";
 export default function ProjectGrid({ heading, id }: { heading: string; id?: string }) {
   return (
     <section id={id} className="mx-auto w-full max-w-[1440px] scroll-mt-20 px-5 pt-20 sm:px-10 sm:pt-24">
-      <Reveal as="h2" className="font-display text-3xl font-medium text-head sm:text-4xl">
-        {heading}
+      <Reveal className="flex flex-col gap-3">
+        <span className="eyebrow">Selected work</span>
+        <h2 className="text-gradient font-display text-3xl font-medium sm:text-4xl">{heading}</h2>
       </Reveal>
       <div className="mt-8 grid gap-6 sm:mt-10 lg:grid-cols-2">
         {projects.map((p, k) => (
