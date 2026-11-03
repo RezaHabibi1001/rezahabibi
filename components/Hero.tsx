@@ -43,16 +43,18 @@ export default function Hero() {
             </span>
           </div>
         </div>
-        <div className="relative flex items-end justify-center px-6 pt-4 sm:px-10 md:min-h-[460px]">
+        <div className="relative flex items-end justify-center px-6 pt-8 sm:px-10 md:min-h-[460px]">
           <div
-            className="absolute bottom-0 left-1/2 h-3/4 w-3/4 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"
+            className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[min(118%,34rem)] -translate-x-1/2"
             aria-hidden
-          />
-          <div
-            className="absolute right-8 top-10 h-32 w-32 rounded-full bg-primary-soft/10 blur-2xl sm:right-14"
-            aria-hidden
-          />
-          <div className="rise relative w-full max-w-[420px] drop-shadow-[0_24px_40px_rgba(49,46,129,0.14)]">
+          >
+            <div className="relative aspect-[2/1] w-full">
+              <div className="absolute inset-0 rounded-t-full bg-gradient-to-b from-accent-soft/35 via-accent/18 to-primary/10" />
+              <div className="absolute inset-[6%] rounded-t-full border border-accent/20 bg-gradient-to-b from-brand/80 via-accent-tint/70 to-transparent" />
+              <div className="absolute -inset-x-[8%] bottom-0 h-[70%] rounded-t-full bg-primary/10 blur-2xl" />
+            </div>
+          </div>
+          <div className="rise relative z-10 w-full max-w-[420px] drop-shadow-[0_28px_48px_rgba(46,35,24,0.22)]">
             <Image
               style={i(2)}
               src="/og-portrait.jpeg"

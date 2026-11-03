@@ -94,18 +94,24 @@ export default function WorkPage() {
       <section className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-28 sm:px-10 sm:pt-32">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <Reveal>
-            <div className="hero-panel relative flex aspect-[4/5] max-w-sm items-end overflow-hidden rounded-[28px]">
+            <div className="hero-panel relative flex aspect-[4/5] max-w-sm items-end justify-center overflow-hidden rounded-[28px] px-6 pt-10">
               <div
-                className="absolute bottom-0 left-1/2 h-2/3 w-2/3 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"
+                className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[min(118%,22rem)] -translate-x-1/2"
                 aria-hidden
-              />
+              >
+                <div className="relative aspect-[2/1] w-full">
+                  <div className="absolute inset-0 rounded-t-full bg-gradient-to-b from-accent-soft/35 via-accent/18 to-primary/10" />
+                  <div className="absolute inset-[6%] rounded-t-full border border-accent/20 bg-gradient-to-b from-brand/80 via-accent-tint/70 to-transparent" />
+                  <div className="absolute -inset-x-[8%] bottom-0 h-[70%] rounded-t-full bg-primary/10 blur-2xl" />
+                </div>
+              </div>
               <Image
                 src="/og-portrait.jpeg"
                 alt={`Portrait of ${site.name}`}
                 width={640}
                 height={626}
                 sizes="(min-width: 1024px) 384px, 90vw"
-                className="relative block h-auto w-full px-6 pt-10 drop-shadow-[0_24px_40px_rgba(49,46,129,0.14)]"
+                className="relative z-10 block h-auto w-full drop-shadow-[0_28px_48px_rgba(46,35,24,0.22)]"
               />
             </div>
           </Reveal>
