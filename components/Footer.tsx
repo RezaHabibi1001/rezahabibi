@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/content/site";
 import AgentsModal from "./AgentsModal";
 import Reveal from "./Reveal";
@@ -14,7 +15,11 @@ export default function Footer() {
 
         <Reveal index={1} className="mt-14 max-w-xl">
           <p className="font-display text-lg leading-relaxed text-brand/85">
-            Hiring for a backend role, or have an API that needs building? Get in touch.
+            Hiring for a backend role, or have an API that needs building?{" "}
+            <Link href="/contact" className="underline decoration-brand/30 underline-offset-4 transition-colors duration-200 hover:text-accent-soft hover:decoration-accent-soft">
+              Get in touch
+            </Link>
+            .
           </p>
           <a
             href={`mailto:${site.email}`}

@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/", 1, "monthly", [absoluteUrl("/portrait.webp")]),
     page("/work", 0.9, "monthly"),
     page("/resume", 0.8, "monthly"),
+    page("/contact", 0.8, "monthly"),
     ...projects.map((p) => page(`/${p.slug}`, 0.8, "yearly")),
     page("/ask", 0.5, "yearly"),
     page("/agents", 0.5, "monthly"),

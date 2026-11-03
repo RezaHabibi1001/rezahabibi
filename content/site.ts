@@ -31,6 +31,7 @@ export const site = {
   monogram: "Rh.",
   role: "Backend Developer",
   location: "Herat, Afghanistan",
+  timezone: "UTC+4:30",
   year: 2026,
   email: "rezahabibi.tech@gmail.com",
   phone: "+93 79 614 6514",
@@ -326,7 +327,7 @@ export const faq = [
   },
   {
     q: "How do I contact you?",
-    a: "Email rezahabibi.tech@gmail.com or call +93 79 614 6514.",
+    a: "Use the contact page, email rezahabibi.tech@gmail.com, or call +93 79 614 6514.",
     keys: ["contact", "email", "hire", "phone", "reach"],
   },
 ];

@@ -14,6 +14,7 @@ ${site.name} is a ${site.role.toLowerCase()} based in ${site.location}. Contact:
 - [Home](${absoluteUrl("/")}): overview, projects and internal systems
 - [Work](${absoluteUrl("/work")}): all case studies
 - [Resume](${absoluteUrl("/resume")}): experience, education and skills ([PDF](${absoluteUrl("/resume.pdf")}))
+- [Contact](${absoluteUrl("/contact")}): email, phone and message form
 - [Facts for AI agents](${absoluteUrl("/agents")}): plain, verifiable facts
 
 ## Case studies
