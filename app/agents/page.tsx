@@ -17,7 +17,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   return (
     <section className="border-t border-line py-8">
       <h2 className="font-display text-xl font-medium text-head">{title}</h2>
-      <div className="mt-3 flex flex-col gap-2 font-ui text-[15px] leading-relaxed text-ink/80">{children}</div>
+      <div className="mt-3 flex flex-col gap-2 font-ui text-[15px] leading-relaxed text-ink/90">{children}</div>
     </section>
   );
 }

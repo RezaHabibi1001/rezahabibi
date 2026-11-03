@@ -48,7 +48,7 @@ export default function ContactPage() {
           </h1>
           <p
             style={i(2)}
-            className="max-w-md font-display text-lg leading-relaxed text-pretty text-ink/75"
+            className="max-w-md font-display text-lg leading-relaxed text-pretty text-ink/90"
           >
             Hiring for a backend role, or have an API that needs building? Tell me a little about it
             and I&rsquo;ll get back to you.

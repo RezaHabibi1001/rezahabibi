@@ -26,7 +26,7 @@ export default function Hero() {
           </h1>
           <p
             style={i(2)}
-            className="max-w-xl font-display text-base leading-relaxed text-ink/80 sm:text-lg"
+            className="max-w-xl font-display text-base leading-relaxed text-ink/90 sm:text-lg"
           >
             {site.intro}
           </p>

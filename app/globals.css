@@ -12,29 +12,29 @@
 
   /* palette — brand warm white #fffefb with ink and gold */
   --background: #fffefb;
-  --foreground: #1c1917;
+  --foreground: #0c0a09;
 
   --color-primary: #4a3a24;
   --color-primary-strong: #2e2318;
   --color-primary-soft: #8c6524;
   --color-primary-tint: #fffdf7;
 
-  --color-accent: #8a5a12;
+  --color-accent: #6b450e;
   --color-accent-soft: #d9a441;
   --color-accent-tint: #fdf9ef;
 
   --color-brand-cream: #fffefb;
-  --color-brand-gold: #8a5a12;
+  --color-brand-gold: #6b450e;
   --color-footer: #17100a;
-  --color-ink: #3f3a33;
-  --color-head-ink: #1c1917;
-  --color-body-ink: #44403c;
-  --color-muted: #6b6357;
-  --color-faint: #8a8173;
+  --color-ink: #292524;
+  --color-head-ink: #0c0a09;
+  --color-body-ink: #1c1917;
+  --color-muted: #4a433a;
+  --color-faint: #655c50;
   --color-line: #f0ebe2;
   --color-hero-bg: #fffefb;
   --color-pill-bg: #fdf9f0;
-  --color-pill-ink: #6b4a14;
+  --color-pill-ink: #4f360c;
   --color-fun-bg: #1a140c;
   --color-fun-ink: #120d07;
   --color-surface: #fffdf9;
@@ -42,7 +42,7 @@
 
   --gradient-primary: linear-gradient(135deg, #3a2b18 0%, #6b4e24 100%);
   --gradient-primary-hover: linear-gradient(135deg, #2e2318 0%, #4a3a24 100%);
-  --gradient-heading: linear-gradient(120deg, #1c1917 0%, #6b4a1e 58%, #a9803f 100%);
+  --gradient-heading: linear-gradient(120deg, #0c0a09 0%, #3d2a10 55%, #7a5618 100%);
   --gradient-hero: linear-gradient(135deg, #ffffff 0%, #fffefb 48%, #fffdf6 100%);
   --gradient-accent: linear-gradient(90deg, #4a3a24 0%, #c0994e 100%);
   --gradient-card: linear-gradient(160deg, #ffffff 0%, #fffdf8 100%);
@@ -94,6 +94,7 @@ body {
   color: var(--color-body-ink);
   font-family: var(--font-instrument), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -115,7 +116,7 @@ body {
 }
 
 .text-gradient-primary {
-  background-image: linear-gradient(120deg, var(--color-primary-strong) 0%, var(--color-primary-soft) 100%);
+  background-image: linear-gradient(120deg, #1a120a 0%, #6b450e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

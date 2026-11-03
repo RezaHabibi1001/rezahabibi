@@ -121,7 +121,7 @@ export default function AgentsModal() {
                 ×
               </button>
             </div>
-            <p className="mt-2 font-display text-[15px] text-ink/70">
+            <p className="mt-2 font-display text-[15px] text-ink/85">
               Structured summary, ready to parse.
             </p>
             <pre className="mt-5 overflow-x-auto rounded-2xl bg-[#1c1917] p-5 font-mono text-[12.5px] leading-6 text-[#f4ead2]">

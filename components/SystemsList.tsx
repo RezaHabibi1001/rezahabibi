@@ -8,7 +8,7 @@ export default function SystemsList() {
         <Reveal className="flex flex-col gap-3">
           <span className="eyebrow">Behind the scenes</span>
           <h2 className="text-gradient font-display text-xl font-medium sm:text-2xl">Internal systems I built</h2>
-          <p className="mt-1 max-w-[620px] font-display text-[15px] leading-relaxed text-ink/75">
+          <p className="mt-1 max-w-[620px] font-display text-[15px] leading-relaxed text-ink/90">
             Services built inside the roles above for Berang, Microcis and Hindukosh-Bridge. They run behind the
             products, so there are no screens to show. Each card names the problem it solves.
           </p>
@@ -28,7 +28,7 @@ export default function SystemsList() {
                     </span>
                   </div>
                   <h3 className="font-display text-[22px] font-medium leading-[1.35] text-head">{s.title}</h3>
-                  <p className="mt-4 font-display text-sm leading-5 text-ink/75">{s.text}</p>
+                  <p className="mt-4 font-display text-sm leading-5 text-ink/90">{s.text}</p>
                 </div>
               </article>
             </Reveal>

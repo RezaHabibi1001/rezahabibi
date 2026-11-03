@@ -56,7 +56,7 @@ export default function AssistantPill() {
             <p className="font-display text-lg font-medium text-head">
               Meet my API sidekick <span className="text-brand-ink">{name.toUpperCase()}</span>
             </p>
-            <p className="min-h-5 font-ui text-sm text-ink/65" aria-hidden>
+            <p className="min-h-5 font-ui text-sm text-ink/85" aria-hidden>
               {typed}
               <span className="caret text-accent">|</span>
             </p>

@@ -68,15 +68,15 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
               </h1>
               <dl style={i(2)} className="grid grid-cols-2 gap-4 font-ui text-sm sm:grid-cols-3">
                 <div>
-                  <dt className="opacity-70">Role</dt>
+                  <dt className="opacity-85">Role</dt>
                   <dd className="font-medium">{p.role}</dd>
                 </div>
                 <div>
-                  <dt className="opacity-70">Timeline</dt>
+                  <dt className="opacity-85">Timeline</dt>
                   <dd className="font-medium">{p.period}</dd>
                 </div>
                 <div className="col-span-2 sm:col-span-1">
-                  <dt className="opacity-70">Stack</dt>
+                  <dt className="opacity-85">Stack</dt>
                   <dd className="font-medium">{p.stack.join(", ")}</dd>
                 </div>
               </dl>
@@ -100,7 +100,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
                 {b.h}
               </h3>
               {b.list ? (
-                <ul className="flex flex-col gap-2 font-display text-[16px] leading-relaxed text-ink/80">
+                <ul className="flex flex-col gap-2 font-display text-[16px] leading-relaxed text-ink/90">
                   {b.list.map((g) => (
                     <li key={g} className="flex gap-3">
                       <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -109,7 +109,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
                   ))}
                 </ul>
               ) : (
-                <p className="font-display text-[16px] leading-relaxed text-ink/80">{b.body}</p>
+                <p className="font-display text-[16px] leading-relaxed text-ink/90">{b.body}</p>
               )}
             </Reveal>
           ))}
@@ -131,7 +131,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
                     0{k + 1}
                   </span>
                   <h3 className="font-display text-2xl font-medium text-head sm:text-3xl">{d.title}</h3>
-                  <p className="font-display text-[16px] leading-relaxed text-ink/75">{d.text}</p>
+                  <p className="font-display text-[16px] leading-relaxed text-ink/90">{d.text}</p>
                 </div>
                 <div className="card-art rounded-[18px] p-4" style={{ background: p.bg }}>
                   <ProjectArt kind={d.art} ink={p.ink} />
@@ -146,7 +146,7 @@ export default async function CaseStudy({ params }: PageProps<"/[slug]">) {
       <section className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-20 sm:px-10 sm:pt-28">
         <Reveal className="max-w-3xl">
           <h3 className="text-gradient font-serif text-3xl sm:text-4xl">{p.closing.title}</h3>
-          <p className="mt-4 font-display text-[16px] leading-relaxed text-ink/75">{p.closing.text}</p>
+          <p className="mt-4 font-display text-[16px] leading-relaxed text-ink/90">{p.closing.text}</p>
         </Reveal>
         <Reveal className="mt-14">
           <Link

@@ -62,7 +62,7 @@ export default function ResumePage() {
         </a>
       </header>
 
-      <p className="mt-10 max-w-3xl font-display text-lg leading-relaxed text-ink/80">{site.summary}</p>
+      <p className="mt-10 max-w-3xl font-display text-lg leading-relaxed text-ink/90">{site.summary}</p>
 
       <div className="mt-12">
         {experience.map((e, k) => (
@@ -71,14 +71,14 @@ export default function ResumePage() {
             <p className="font-ui text-sm text-muted">
               {e.role}, {e.place}
             </p>
-            <p className="mt-3 font-display text-[16px] leading-relaxed text-ink/80">{e.text}</p>
+            <p className="mt-3 font-display text-[16px] leading-relaxed text-ink/90">{e.text}</p>
           </Block>
         ))}
 
         <Block title="Education">
           <h3 className="font-display text-xl font-medium text-head">{education.school}</h3>
           <p className="font-ui text-sm text-muted">{education.period}</p>
-          <p className="mt-3 font-display text-[16px] leading-relaxed text-ink/80">{education.text}</p>
+          <p className="mt-3 font-display text-[16px] leading-relaxed text-ink/90">{education.text}</p>
         </Block>
 
         <Block title="Skills">
@@ -93,7 +93,7 @@ export default function ResumePage() {
 
         {certifications.length > 0 && (
           <Block title="Certifications">
-            <ul className="flex flex-col gap-2 font-display text-[16px] text-ink/80">
+            <ul className="flex flex-col gap-2 font-display text-[16px] text-ink/90">
               {certifications.map((c) => (
                 <li key={c.title}>
                   {c.title} · {c.issuer} · {c.year}
@@ -105,7 +105,7 @@ export default function ResumePage() {
 
         {awards.length > 0 && (
           <Block title="Honors and awards">
-            <ul className="flex flex-col gap-2 font-display text-[16px] text-ink/80">
+            <ul className="flex flex-col gap-2 font-display text-[16px] text-ink/90">
               {awards.map((a) => (
                 <li key={a.title}>
                   {a.title} · {a.year}

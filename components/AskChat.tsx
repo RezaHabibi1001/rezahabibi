@@ -59,7 +59,7 @@ export default function AskChat() {
         </span>
         <div>
           <p className="font-display text-lg font-medium text-head">{name}</p>
-          <p className="font-ui text-xs text-ink/65">Answers from {site.firstName}&rsquo;s resume</p>
+          <p className="font-ui text-xs text-ink/85">Answers from {site.firstName}&rsquo;s resume</p>
         </div>
       </div>
 

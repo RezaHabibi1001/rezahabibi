@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-[1440px] px-5 pb-12 pt-20 sm:px-10 sm:pt-28">
         <Reveal className="flex flex-col gap-2">
           <p className="text-gradient-light font-serif text-4xl sm:text-6xl">{site.name}</p>
-          <p className="font-display text-lg text-brand/75">{site.role}</p>
-          <p className="font-display text-lg text-brand/75">{site.location}</p>
+          <p className="font-display text-lg text-brand/90">{site.role}</p>
+          <p className="font-display text-lg text-brand/90">{site.location}</p>
         </Reveal>
 
         <Reveal index={1} className="mt-14 max-w-xl">
@@ -27,7 +27,7 @@ export default function Footer() {
           >
             {site.email}
           </a>
-          <a href={`tel:${site.phoneHref}`} className="mt-3 block font-display text-lg text-brand/80 hover:text-accent-soft">
+          <a href={`tel:${site.phoneHref}`} className="mt-3 block font-display text-lg text-brand/90 hover:text-accent-soft">
             {site.phone}
           </a>
         </Reveal>
@@ -46,7 +46,7 @@ export default function Footer() {
           <AgentsModal />
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 font-ui text-xs text-brand/55 sm:flex-row sm:justify-between">
+        <div className="mt-10 flex flex-col gap-2 font-ui text-xs text-brand/85 sm:flex-row sm:justify-between">
           <span>© {site.year} {site.name}</span>
         </div>
       </div>

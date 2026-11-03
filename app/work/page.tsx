@@ -43,7 +43,7 @@ export default function WorkPage() {
           </h1>
           <p
             style={i(2)}
-            className="mt-4 max-w-2xl font-display text-lg leading-relaxed text-ink/75"
+            className="mt-4 max-w-2xl font-display text-lg leading-relaxed text-ink/90"
           >
             Backend systems for commerce, accounting, real-time media and video.
             Each case study covers the problem, the approach and the decisions
@@ -62,7 +62,7 @@ export default function WorkPage() {
             <h2 className="font-display text-3xl font-medium sm:text-4xl">
               My fun time
             </h2>
-            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-brand/70">
+            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-brand/85">
               Small experiments I run to learn something properly, outside
               client work.
             </p>
@@ -74,13 +74,13 @@ export default function WorkPage() {
                   className="card flex h-full flex-col gap-3 rounded-[22px] p-7 text-ink sm:p-9"
                   style={{ background: x.bg }}
                 >
-                  <span className="font-mono text-xs opacity-60">
+                  <span className="font-mono text-xs opacity-80">
                     experiment/0{k + 1}
                   </span>
                   <h3 className="font-display text-2xl font-medium">
                     {x.title}
                   </h3>
-                  <p className="font-display text-[15px] leading-relaxed text-ink/70">
+                  <p className="font-display text-[15px] leading-relaxed text-ink/85">
                     {x.text}
                   </p>
                 </article>
@@ -117,7 +117,7 @@ export default function WorkPage() {
             {about.map((t) => (
               <p
                 key={t}
-                className="font-display text-[16px] leading-relaxed text-ink/75"
+                className="font-display text-[16px] leading-relaxed text-ink/90"
               >
                 {t}
               </p>

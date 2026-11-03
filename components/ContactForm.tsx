@@ -110,7 +110,7 @@ export default function ContactForm() {
         <h2 id="form-title" className="text-gradient font-serif text-3xl leading-tight sm:text-4xl">
           Thanks, {firstName}. Your message is on its way.
         </h2>
-        <p className="max-w-md font-display text-lg leading-relaxed text-ink/75">
+        <p className="max-w-md font-display text-lg leading-relaxed text-ink/90">
           I&rsquo;ll reply to{" "}
           <strong className="font-medium text-head">{email}</strong>. In the
           meantime, the case studies show how I approach problems like yours.

@@ -10,12 +10,12 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
       style={{ background: project.bg, color: project.ink }}
     >
       <div className={`flex flex-col gap-3 px-6 pt-7 sm:px-9 sm:pt-9 ${featured ? "lg:self-center lg:pb-9" : ""}`}>
-        <div className="flex items-center justify-between gap-4 font-ui text-xs font-medium uppercase tracking-[0.12em] opacity-80">
+        <div className="flex items-center justify-between gap-4 font-ui text-xs font-medium uppercase tracking-[0.12em] opacity-95">
           <span>{project.company}</span>
           <span className="shrink-0">{project.period}</span>
         </div>
         <h3 className="font-display text-2xl font-medium leading-tight sm:text-[28px]">{project.title}</h3>
-        <p className="max-w-lg font-display text-[15px] leading-relaxed opacity-80">{project.blurb}</p>
+        <p className="max-w-lg font-display text-[15px] leading-relaxed opacity-95">{project.blurb}</p>
         <ul className="mt-1 flex flex-wrap gap-2">
           {project.stack.map((s) => (
             <li
