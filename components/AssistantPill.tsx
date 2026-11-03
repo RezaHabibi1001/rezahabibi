@@ -49,12 +49,12 @@ export default function AssistantPill() {
       <AuroraCanvas className="opacity-40" />
       <div className="relative flex flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div className="flex items-center gap-4">
-          <span className="beat grid h-12 w-12 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-[#c7d2fe]">
+          <span className="beat grid h-12 w-12 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-[#f0deb4]">
             {"{ }"}
           </span>
           <div>
             <p className="font-display text-lg font-medium text-head">
-              Meet my API sidekick <span className="text-brand">{name.toUpperCase()}</span>
+              Meet my API sidekick <span className="text-brand-ink">{name.toUpperCase()}</span>
             </p>
             <p className="min-h-5 font-ui text-sm text-ink/65" aria-hidden>
               {typed}

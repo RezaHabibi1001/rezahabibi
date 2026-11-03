@@ -7,14 +7,14 @@ import sharp from "sharp";
 const root = path.resolve(import.meta.dirname, "..");
 const out = (...p) => path.join(root, ...p);
 
-const BG = "#111827";
-const DOT = "#d97706";
+const BG = "#fffefb";
+const DOT = "#a9803f";
 
 // Rounded square with a serif "R" and an accent dot. `pad` shrinks the mark for maskable icons.
 const mark = (pad = 0, rounded = true) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="${rounded ? 112 : 0}" fill="${BG}"/>
   <g transform="translate(${pad} ${pad}) scale(${(512 - pad * 2) / 512})">
-    <text x="238" y="372" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="340" fill="#ffffff">R</text>
+    <text x="238" y="372" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="340" fill="#1c1917">R</text>
     <circle cx="392" cy="352" r="34" fill="${DOT}"/>
   </g>
 </svg>`;

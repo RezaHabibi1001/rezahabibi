@@ -69,8 +69,8 @@ export const projects: Project[] = [
     blurb:
       "Backend services for a movie catalogue, live streaming and an encoding pipeline that keeps processing and delivery smooth.",
     stack: ["NestJS", "FFmpeg", "Redis", "Docker"],
-    bg: "#e7ecff",
-    ink: "#1e1b4b",
+    bg: "#fcf9f2",
+    ink: "#4a3418",
     art: "film",
     headline:
       "A video platform where uploads, encodes and live streams share one backend.",
@@ -118,8 +118,8 @@ export const projects: Project[] = [
     blurb:
       "A Mediasoup media server for live streaming with low latency and stable real-time delivery, plus the REST and GraphQL APIs around it.",
     stack: ["Mediasoup", "WebRTC", "GraphQL", "Node.js"],
-    bg: "#eeefff",
-    ink: "#312e81",
+    bg: "#fffdf8",
+    ink: "#5a431c",
     art: "stream",
     headline:
       "Live streams that stay live: a Mediasoup media server built for low latency.",
@@ -167,8 +167,8 @@ export const projects: Project[] = [
     blurb:
       "Scalable services for carpet and retail online shops and a local accounting system, with secure APIs built for performance and clean architecture.",
     stack: ["REST", "GraphQL", "TypeORM", "SQL"],
-    bg: "#eef0fd",
-    ink: "#3730a3",
+    bg: "#fdfaf4",
+    ink: "#4e3a1c",
     art: "commerce",
     headline:
       "Online shops and a local accounting system on one clean, secure API foundation.",
@@ -238,22 +238,22 @@ export const playground = [
   {
     title: "Rate limits that forgive",
     text: "A Redis token-bucket limiter that lets short bursts through and still protects the API.",
-    bg: "#efe9fd",
+    bg: "#fbf7ef",
   },
   {
     title: "Zero-downtime deploys",
     text: "Nginx, Docker and PM2 together so a release never drops a request.",
-    bg: "#e6f4ec",
+    bg: "#f8f6ee",
   },
   {
     title: "Same schema, two ORMs",
     text: "One data model in TypeORM and Prisma, compared on migrations, typing and query output.",
-    bg: "#e8effc",
+    bg: "#fdfbf5",
   },
   {
     title: "Load-testing a live room",
     text: "Simulated participants against a Mediasoup room to find where quality starts to drop.",
-    bg: "#fbfbfe",
+    bg: "#fffefb",
   },
 ];
 

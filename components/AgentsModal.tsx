@@ -124,7 +124,7 @@ export default function AgentsModal() {
             <p className="mt-2 font-display text-[15px] text-ink/70">
               Structured summary, ready to parse.
             </p>
-            <pre className="mt-5 overflow-x-auto rounded-2xl bg-[#16181d] p-5 font-mono text-[12.5px] leading-6 text-[#dfe6f1]">
+            <pre className="mt-5 overflow-x-auto rounded-2xl bg-[#1c1917] p-5 font-mono text-[12.5px] leading-6 text-[#f4ead2]">
               {SUMMARY}
             </pre>
             <div className="mt-5 flex items-center gap-4 font-ui text-sm">

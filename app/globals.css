@@ -10,46 +10,47 @@
   --dur-standard: 0.4s;
   --dur-slow: 0.65s;
 
-  /* palette */
-  --background: #fcfcfe;
-  --foreground: #0f172a;
+  /* palette — brand warm white #fffefb with ink and gold */
+  --background: #fffefb;
+  --foreground: #1c1917;
 
-  --color-primary: #4338ca;
-  --color-primary-strong: #312e81;
-  --color-primary-soft: #6366f1;
-  --color-primary-tint: #eef1ff;
+  --color-primary: #4a3a24;
+  --color-primary-strong: #2e2318;
+  --color-primary-soft: #8c6524;
+  --color-primary-tint: #fffdf7;
 
-  --color-accent: #4338ca;
-  --color-accent-soft: #d97706;
-  --color-accent-tint: #eef1ff;
+  --color-accent: #8a5a12;
+  --color-accent-soft: #d9a441;
+  --color-accent-tint: #fdf9ef;
 
-  --color-brand-blue: #4338ca;
-  --color-footer: #0b1020;
-  --color-ink: #1f2937;
-  --color-head-ink: #0f172a;
-  --color-body-ink: #334155;
-  --color-muted: #5b6475;
-  --color-faint: #94a3b8;
-  --color-line: #e5e8f0;
-  --color-hero-bg: #f4f5fd;
-  --color-pill-bg: #eef1ff;
-  --color-pill-ink: #3730a3;
-  --color-fun-bg: #101629;
-  --color-fun-ink: #0a0f1e;
-  --color-surface: #f7f8fc;
-  --color-terminal: #111827;
+  --color-brand-cream: #fffefb;
+  --color-brand-gold: #8a5a12;
+  --color-footer: #17100a;
+  --color-ink: #3f3a33;
+  --color-head-ink: #1c1917;
+  --color-body-ink: #44403c;
+  --color-muted: #6b6357;
+  --color-faint: #8a8173;
+  --color-line: #f0ebe2;
+  --color-hero-bg: #fffefb;
+  --color-pill-bg: #fdf9f0;
+  --color-pill-ink: #6b4a14;
+  --color-fun-bg: #1a140c;
+  --color-fun-ink: #120d07;
+  --color-surface: #fffdf9;
+  --color-terminal: #241b10;
 
-  --gradient-primary: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%);
-  --gradient-primary-hover: linear-gradient(135deg, #312e81 0%, #4338ca 100%);
-  --gradient-heading: linear-gradient(120deg, #0f172a 0%, #312e81 58%, #4338ca 100%);
-  --gradient-hero: linear-gradient(135deg, #f8f9ff 0%, #eef1fc 48%, #f1f3ff 100%);
-  --gradient-accent: linear-gradient(90deg, #312e81 0%, #6366f1 100%);
-  --gradient-card: linear-gradient(160deg, #ffffff 0%, #f1f3fd 100%);
+  --gradient-primary: linear-gradient(135deg, #3a2b18 0%, #6b4e24 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #2e2318 0%, #4a3a24 100%);
+  --gradient-heading: linear-gradient(120deg, #1c1917 0%, #6b4a1e 58%, #a9803f 100%);
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #fffefb 48%, #fffdf6 100%);
+  --gradient-accent: linear-gradient(90deg, #4a3a24 0%, #c0994e 100%);
+  --gradient-card: linear-gradient(160deg, #ffffff 0%, #fffdf8 100%);
 
-  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04), 0 12px 32px -24px rgb(15 23 42 / 0.28);
-  --shadow-card-hover: 0 20px 48px -28px rgb(49 46 129 / 0.38);
-  --shadow-button: 0 10px 24px -14px rgb(55 48 163 / 0.65);
-  --ring-focus: #6366f1;
+  --shadow-card: 0 1px 2px rgb(28 25 23 / 0.05), 0 12px 32px -24px rgb(28 25 23 / 0.32);
+  --shadow-card-hover: 0 20px 48px -28px rgb(58 43 24 / 0.42);
+  --shadow-button: 0 10px 24px -14px rgb(74 58 36 / 0.65);
+  --ring-focus: #a9803f;
 }
 
 @theme inline {
@@ -68,7 +69,8 @@
   --color-pill: var(--color-pill-bg);
   --color-pill-ink: var(--color-pill-ink);
   --color-footer: var(--color-footer);
-  --color-brand: var(--color-brand-blue);
+  --color-brand: var(--color-brand-cream);
+  --color-brand-ink: var(--color-brand-gold);
   --color-head: var(--color-head-ink);
   --color-faint: var(--color-faint);
   --color-line: var(--color-line);
@@ -95,7 +97,7 @@ body {
 }
 
 ::selection {
-  background: rgb(99 102 241 / 0.22);
+  background: rgb(217 164 65 / 0.28);
   color: var(--color-head-ink);
 }
 
@@ -120,7 +122,7 @@ body {
 }
 
 .text-gradient-light {
-  background-image: linear-gradient(120deg, #ffffff 20%, #c7d2fe 100%);
+  background-image: linear-gradient(120deg, #ffffff 20%, #f0deb4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -155,7 +157,7 @@ body {
 }
 
 .eyebrow-light {
-  color: var(--color-primary-soft);
+  color: var(--color-accent-soft);
 }
 
 .heading-accent {
@@ -204,25 +206,25 @@ body {
 
 .btn-primary {
   background-image: var(--gradient-primary);
-  color: #ffffff;
+  color: #fffefb;
   box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
   background-image: var(--gradient-primary-hover);
-  box-shadow: 0 14px 30px -14px rgb(49 46 129 / 0.72);
+  box-shadow: 0 14px 30px -14px rgb(46 35 24 / 0.72);
   transition-duration: var(--dur-standard);
 }
 
 .btn-secondary {
   border: 1px solid var(--color-line);
-  background-color: rgb(255 255 255 / 0.72);
+  background-color: rgb(255 254 251 / 0.72);
   color: var(--color-head-ink);
 }
 
 .btn-secondary:hover {
-  border-color: rgb(67 56 202 / 0.28);
-  background-color: #ffffff;
+  border-color: rgb(138 90 18 / 0.28);
+  background-color: #fffdf6;
   color: var(--color-primary-strong);
 }
 
@@ -258,10 +260,10 @@ body {
 
 .hero-panel {
   position: relative;
-  border: 1px solid rgb(67 56 202 / 0.08);
+  border: 1px solid rgb(138 90 18 / 0.08);
   background-color: var(--color-hero-bg);
   background-image: var(--gradient-hero);
-  box-shadow: 0 24px 70px -48px rgb(49 46 129 / 0.45);
+  box-shadow: 0 24px 70px -48px rgb(58 43 24 / 0.45);
 }
 
 .hero-panel::before {
@@ -270,13 +272,13 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(520px 320px at 78% 18%, rgb(99 102 241 / 0.12), transparent 70%),
-    radial-gradient(420px 260px at 12% 88%, rgb(99 102 241 / 0.1), transparent 70%);
+    radial-gradient(520px 320px at 78% 18%, rgb(176 138 79 / 0.12), transparent 70%),
+    radial-gradient(420px 260px at 12% 88%, rgb(176 138 79 / 0.1), transparent 70%);
 }
 
 .assistant-card {
-  border: 1px solid rgb(67 56 202 / 0.12);
-  background-image: linear-gradient(135deg, #eef1ff 0%, #f7f5ff 55%, #e8ecff 100%);
+  border: 1px solid rgb(138 90 18 / 0.12);
+  background-image: linear-gradient(135deg, #fffefb 0%, #fffdf7 55%, #fdf9ee 100%);
   box-shadow: var(--shadow-card);
 }
 
@@ -293,7 +295,7 @@ body {
 
 .system-card:hover {
   transform: translateY(-4px);
-  border-color: rgb(67 56 202 / 0.22);
+  border-color: rgb(138 90 18 / 0.22);
   box-shadow: var(--shadow-card-hover);
   transition-duration: var(--dur-standard);
   transition-timing-function: var(--ease-enter);
@@ -306,22 +308,22 @@ body {
   flex-shrink: 0;
   border-radius: 999px;
   background-image: var(--gradient-accent);
-  box-shadow: 0 0 0 3px rgb(99 102 241 / 0.16);
+  box-shadow: 0 0 0 3px rgb(176 138 79 / 0.16);
 }
 
 .fun-panel {
   border: 1px solid rgb(255 255 255 / 0.08);
   background-color: var(--color-fun-bg);
   background-image:
-    radial-gradient(640px 360px at 88% 8%, rgb(99 102 241 / 0.2), transparent 68%),
-    radial-gradient(480px 280px at 8% 92%, rgb(99 102 241 / 0.16), transparent 68%);
+    radial-gradient(640px 360px at 88% 8%, rgb(217 164 65 / 0.2), transparent 68%),
+    radial-gradient(480px 280px at 8% 92%, rgb(217 164 65 / 0.16), transparent 68%);
 }
 
 .site-footer {
   background-color: var(--color-footer);
   background-image:
-    radial-gradient(700px 380px at 88% 0%, rgb(99 102 241 / 0.24), transparent 65%),
-    radial-gradient(520px 300px at 4% 100%, rgb(217 119 6 / 0.12), transparent 65%);
+    radial-gradient(700px 380px at 88% 0%, rgb(217 164 65 / 0.22), transparent 65%),
+    radial-gradient(520px 300px at 4% 100%, rgb(217 164 65 / 0.1), transparent 65%);
 }
 
 .decision-card {
@@ -332,8 +334,8 @@ body {
 
 .chat-bubble-user {
   background-image: var(--gradient-primary);
-  color: #ffffff;
-  box-shadow: 0 10px 22px -18px rgb(49 46 129 / 0.6);
+  color: #fffefb;
+  box-shadow: 0 10px 22px -18px rgb(46 35 24 / 0.6);
 }
 
 /* ---------- load-in: hero children rise one after another ---------- */
@@ -366,7 +368,7 @@ body {
 
 /* ---------- cards ---------- */
 .card {
-  border: 1px solid rgb(15 23 42 / 0.06);
+  border: 1px solid rgb(28 25 23 / 0.06);
   box-shadow: var(--shadow-card);
   transition:
     transform var(--dur-quick) var(--ease-exit),
@@ -375,7 +377,7 @@ body {
 }
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgb(67 56 202 / 0.2);
+  border-color: rgb(138 90 18 / 0.2);
   box-shadow: var(--shadow-card-hover);
   transition-timing-function: var(--ease-enter);
   transition-duration: var(--dur-standard);
@@ -406,8 +408,8 @@ button:hover .arrow {
   50% { opacity: 0; }
 }
 @keyframes ring {
-  0% { box-shadow: 0 0 0 0 rgb(67 56 202 / 0.34); }
-  100% { box-shadow: 0 0 0 12px rgb(67 56 202 / 0); }
+  0% { box-shadow: 0 0 0 0 rgb(138 90 18 / 0.34); }
+  100% { box-shadow: 0 0 0 12px rgb(138 90 18 / 0); }
 }
 @keyframes nudge {
   0%, 100% { transform: translateX(0); }

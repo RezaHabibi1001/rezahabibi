@@ -72,7 +72,7 @@ export default function AgentsPage() {
           <ul className="list-disc pl-5">
             {projects.map((p) => (
               <li key={p.slug}>
-                <Link href={`/${p.slug}`} className="text-brand underline-offset-4 hover:underline">
+                <Link href={`/${p.slug}`} className="text-brand-ink underline-offset-4 hover:underline">
                   {p.title}
                 </Link>{" "}
                 — {p.company}, {p.period}.
@@ -120,11 +120,11 @@ export default function AgentsPage() {
 
         <Section title="Contact">
           <p>
-            Email: <a href={`mailto:${site.email}`} className="text-brand">{site.email}</a>
+            Email: <a href={`mailto:${site.email}`} className="text-brand-ink">{site.email}</a>
             <br />
             Phone: {site.phone}
             <br />
-            Resume: <a href="/resume.pdf" className="text-brand">/resume.pdf</a>
+            Resume: <a href="/resume.pdf" className="text-brand-ink">/resume.pdf</a>
           </p>
         </Section>
       </div>

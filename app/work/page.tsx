@@ -56,13 +56,13 @@ export default function WorkPage() {
 
       {/* Fun time */}
       <section className="mx-auto mt-24 w-full max-w-[1440px] px-5 sm:px-10">
-        <div className="fun-panel rounded-[28px] px-6 py-14 text-white sm:px-12 sm:py-20">
+        <div className="fun-panel rounded-[28px] px-6 py-14 text-brand sm:px-12 sm:py-20">
           <Reveal className="flex flex-col gap-3">
             <span className="eyebrow eyebrow-light">Playground</span>
             <h2 className="font-display text-3xl font-medium sm:text-4xl">
               My fun time
             </h2>
-            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-white/70">
+            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-brand/70">
               Small experiments I run to learn something properly, outside
               client work.
             </p>

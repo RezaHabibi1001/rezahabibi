@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-brand/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-5 sm:px-10">
         <Link
           href="/"

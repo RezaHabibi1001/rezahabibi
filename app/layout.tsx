@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#fcfcfe",
+  themeColor: "#fffefb",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={graph(personSchema(), websiteSchema())} />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-head focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-head focus:px-4 focus:py-2 focus:text-brand"
         >
           Skip to content
         </a>

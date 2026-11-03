@@ -54,7 +54,7 @@ export default function AskChat() {
       <AuroraCanvas className="opacity-35" />
 
       <div className="relative flex items-center gap-4 border-b border-white/60 px-5 py-4 sm:px-8">
-        <span className="beat grid h-11 w-11 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-[#c7d2fe]">
+        <span className="beat grid h-11 w-11 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-[#f0deb4]">
           {"{ }"}
         </span>
         <div>
@@ -77,7 +77,7 @@ export default function AskChat() {
           </p>
         ))}
         {thinking && (
-          <p className="think self-start rounded-2xl border border-line bg-white px-4 py-3 text-brand" aria-label="Thinking">
+          <p className="think self-start rounded-2xl border border-line bg-white px-4 py-3 text-brand-ink" aria-label="Thinking">
             <span>●</span> <span>●</span> <span>●</span>
           </p>
         )}
@@ -90,7 +90,7 @@ export default function AskChat() {
               key={f.q}
               type="button"
               onClick={() => send(f.q)}
-              className="shrink-0 rounded-full border border-brand/20 bg-white/70 px-4 py-1.5 font-ui text-sm text-brand transition-colors duration-200 hover:border-brand/40 hover:bg-white"
+              className="shrink-0 rounded-full border border-brand-ink/20 bg-white/70 px-4 py-1.5 font-ui text-sm text-brand-ink transition-colors duration-200 hover:border-brand-ink/40 hover:bg-white"
             >
               {f.q}
             </button>
