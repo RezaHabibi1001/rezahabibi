@@ -62,7 +62,7 @@ export default function ContactPage() {
                 </span>
                 <a
                   href={`mailto:${site.email}`}
-                  className="break-all font-display text-lg text-head transition-colors duration-200 hover:text-primary"
+                  className="break-all font-display text-lg text-head transition-colors duration-200 hover:text-accent-hover"
                 >
                   {site.email}
                 </a>

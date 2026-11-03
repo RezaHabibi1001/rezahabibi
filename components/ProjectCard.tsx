@@ -20,7 +20,7 @@ export default function ProjectCard({ project, featured = false }: { project: Pr
           {project.stack.map((s) => (
             <li
               key={s}
-              className="rounded-full bg-white/65 px-3 py-1 font-ui text-xs font-medium ring-1 ring-black/5 backdrop-blur-sm"
+              className="rounded-full bg-raised/65 px-3 py-1 font-ui text-xs font-medium ring-1 ring-inverse/5 backdrop-blur-sm"
             >
               {s}
             </li>

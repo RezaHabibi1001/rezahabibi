@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/content/site";
+import { palette } from "@/lib/palette";
 import { graph, personSchema, websiteSchema } from "@/lib/schema";
 import { baseKeywords } from "@/lib/seo";
 import "./globals.css";
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#fffefb",
+  themeColor: palette.background,
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={graph(personSchema(), websiteSchema())} />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-head focus:px-4 focus:py-2 focus:text-brand"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-inverse focus:px-4 focus:py-2 focus:text-inverse-text"
         >
           Skip to content
         </a>

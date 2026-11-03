@@ -83,7 +83,7 @@ export default function AgentsModal() {
         ref={triggerRef}
         type="button"
         onClick={() => setState("open")}
-        className="font-ui text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-200 hover:text-primary-soft"
+        className="font-ui text-sm font-semibold uppercase tracking-[0.12em] transition-colors duration-200 hover:text-accent-hover"
       >
         For agents?
       </button>
@@ -91,7 +91,7 @@ export default function AgentsModal() {
       {state !== "closed" && (
         <div className="fixed inset-0 z-50 grid place-items-center p-4">
           <div
-            className={`absolute inset-0 bg-black/45 backdrop-blur-sm ${state === "open" ? "backdrop-open" : "backdrop-close"}`}
+            className={`absolute inset-0 bg-inverse/45 backdrop-blur-sm ${state === "open" ? "backdrop-open" : "backdrop-close"}`}
             onClick={close}
             aria-hidden
           />
@@ -101,7 +101,7 @@ export default function AgentsModal() {
             aria-modal="true"
             aria-labelledby="agents-title"
             onAnimationEnd={onAnimationEnd}
-            className={`relative w-full max-w-lg rounded-[24px] bg-white p-6 text-ink shadow-2xl sm:p-8 ${
+            className={`relative w-full max-w-lg rounded-[24px] bg-raised p-6 text-ink shadow-2xl sm:p-8 ${
               state === "open" ? "modal-open" : "modal-close"
             }`}
           >
@@ -116,7 +116,7 @@ export default function AgentsModal() {
                 type="button"
                 onClick={close}
                 aria-label="Close"
-                className="grid h-9 w-9 place-items-center rounded-full bg-black/5 text-lg transition-colors duration-200 hover:bg-black/10"
+                className="grid h-9 w-9 place-items-center rounded-full bg-inverse/5 text-lg transition-colors duration-200 hover:bg-inverse/10"
               >
                 ×
               </button>
@@ -124,7 +124,7 @@ export default function AgentsModal() {
             <p className="mt-2 font-display text-[15px] text-ink/85">
               Structured summary, ready to parse.
             </p>
-            <pre className="mt-5 overflow-x-auto rounded-2xl bg-[#1c1917] p-5 font-mono text-[12.5px] leading-6 text-[#f4ead2]">
+            <pre className="mt-5 overflow-x-auto rounded-2xl bg-inverse p-5 font-mono text-[12.5px] leading-6 text-inverse-text">
               {SUMMARY}
             </pre>
             <div className="mt-5 flex items-center gap-4 font-ui text-sm">

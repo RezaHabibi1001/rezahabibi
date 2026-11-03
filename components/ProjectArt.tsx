@@ -1,13 +1,16 @@
 import type { Art } from "@/content/site";
+import { palette } from "@/lib/palette";
 
 // Original SVG illustrations, one per project type.
 export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
   const common = { viewBox: "0 0 480 240", className: "block w-full", role: "img" as const };
+  const panel = palette.raised;
+  const onFill = palette.inverseText;
 
   if (kind === "ledger") {
     return (
       <svg {...common} aria-label="Append-only ledger illustration">
-        <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+        <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
         {[0, 1, 2, 3, 4].map((k) => (
           <g key={k} opacity={k === 4 ? 1 : 0.55 + k * 0.1}>
             <rect x="24" y={40 + k * 36} width="432" height="28" rx="6" fill={ink} opacity={k === 4 ? 0.16 : 0.07} />
@@ -26,7 +29,7 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
   if (kind === "api") {
     return (
       <svg {...common} aria-label="API layer illustration">
-        <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+        <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
         {["Web", "Mobile", "Admin"].map((c, k) => (
           <g key={c}>
             <rect x="24" y={48 + k * 62} width="104" height="44" rx="10" fill={ink} opacity="0.12" />
@@ -37,10 +40,10 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
           </g>
         ))}
         <rect x="188" y="92" width="120" height="80" rx="14" fill={ink} />
-        <text x="248" y="128" fontSize="13" fill="#fff" textAnchor="middle" fontFamily="monospace">
+        <text x="248" y="128" fontSize="13" fill={onFill} textAnchor="middle" fontFamily="monospace">
           REST
         </text>
-        <text x="248" y="148" fontSize="13" fill="#fff" textAnchor="middle" fontFamily="monospace">
+        <text x="248" y="148" fontSize="13" fill={onFill} textAnchor="middle" fontFamily="monospace">
           GraphQL
         </text>
         <line x1="308" y1="132" x2="356" y2="132" stroke={ink} strokeWidth="2" opacity="0.4" />
@@ -54,14 +57,14 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
   if (kind === "deploy") {
     return (
       <svg {...common} aria-label="Reconnect and deployment illustration">
-        <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+        <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
         <path d="M60 180 C 140 60, 340 60, 420 180" fill="none" stroke={ink} strokeWidth="3" strokeDasharray="8 8" opacity="0.5" />
         <circle cx="60" cy="180" r="22" fill={ink} opacity="0.2" />
         <circle cx="60" cy="180" r="9" fill={ink} />
         <circle cx="420" cy="180" r="22" fill={ink} opacity="0.2" />
         <circle cx="420" cy="180" r="9" fill={ink} />
         <rect x="190" y="70" width="100" height="34" rx="17" fill={ink} />
-        <text x="240" y="92" fontSize="12" fill="#fff" textAnchor="middle" fontFamily="monospace">
+        <text x="240" y="92" fontSize="12" fill={onFill} textAnchor="middle" fontFamily="monospace">
           rejoin()
         </text>
       </svg>
@@ -71,14 +74,14 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
   if (kind === "film") {
     return (
       <svg {...common} aria-label="Video encoding pipeline illustration">
-        <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+        <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
         <rect x="24" y="44" width="200" height="120" rx="10" fill={ink} opacity="0.9" />
-        <path d="M108 82 l40 22 -40 22z" fill="#fff" />
+        <path d="M108 82 l40 22 -40 22z" fill={onFill} />
         {[0, 1, 2].map((k) => (
           <g key={k}>
             <rect x="256" y={52 + k * 40} width="200" height="28" rx="8" fill={ink} opacity={0.12} />
             <rect x="256" y={52 + k * 40} width={[180, 120, 70][k]} height="28" rx="8" fill={ink} opacity={0.55} />
-            <text x="266" y={71 + k * 40} fontSize="12" fill="#fff" fontFamily="monospace">
+            <text x="266" y={71 + k * 40} fontSize="12" fill={onFill} fontFamily="monospace">
               {["1080p", "720p", "480p"][k]}
             </text>
           </g>
@@ -98,7 +101,7 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
     ];
     return (
       <svg {...common} aria-label="Real-time media server illustration">
-        <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+        <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
         {peers.map(([x, y], k) => (
           <g key={k}>
             <line x1="240" y1="135" x2={x} y2={y} stroke={ink} strokeWidth="2" strokeDasharray="5 6" opacity="0.5" />
@@ -107,11 +110,11 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
           </g>
         ))}
         <circle cx="240" cy="135" r="38" fill={ink} />
-        <text x="240" y="140" textAnchor="middle" fontSize="13" fill="#fff" fontFamily="monospace">
+        <text x="240" y="140" textAnchor="middle" fontSize="13" fill={onFill} fontFamily="monospace">
           SFU
         </text>
-        <rect x="24" y="36" width="58" height="20" rx="10" fill="#e5484d" />
-        <text x="53" y="50" textAnchor="middle" fontSize="11" fill="#fff" fontFamily="sans-serif">
+        <rect x="24" y="36" width="58" height="20" rx="10" fill={palette.accent} />
+        <text x="53" y="50" textAnchor="middle" fontSize="11" fill={palette.onAccent} fontFamily="sans-serif">
           LIVE
         </text>
       </svg>
@@ -120,7 +123,7 @@ export default function ProjectArt({ kind, ink }: { kind: Art; ink: string }) {
 
   return (
     <svg {...common} aria-label="E-commerce and accounting API illustration">
-      <rect x="0" y="20" width="480" height="240" rx="18" fill="#fff" />
+      <rect x="0" y="20" width="480" height="240" rx="18" fill={panel} />
       {[0, 1, 2].map((k) => (
         <g key={k}>
           <rect x={24 + k * 148} y="44" width="136" height="110" rx="10" fill={ink} opacity={0.1 + k * 0.05} />

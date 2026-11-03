@@ -10,47 +10,88 @@
   --dur-standard: 0.4s;
   --dur-slow: 0.65s;
 
-  /* palette — brand warm white #fffefb with ink and gold */
-  --background: #fffefb;
-  --foreground: #0c0a09;
+  /* palette — exact tokens */
+  --palette-background: #f4ede3;
+  --palette-surface: #e7dccb;
+  --palette-raised: #f8f5f0;
+  --palette-text: #33291f;
+  --palette-surface-text: #33291f;
+  --palette-raised-text: #33291f;
+  --palette-raised-muted: #76695b;
+  --palette-muted: #76695b;
+  --palette-muted-on-fill: #6b6053;
+  --palette-accent: #a0703f;
+  --palette-on-accent: #0d0d0d;
+  --palette-accent-hover: #ab8156;
+  --palette-accent-pressed: #b58f69;
+  --palette-tint: #eadecf;
+  --palette-tint-text: #825b33;
+  --palette-border: #c8beae;
+  --palette-control-border: #978d7f;
+  --palette-inverse: #2a291f;
+  --palette-inverse-text: #f4ede3;
+  --palette-focus: #a0703f;
 
-  --color-primary: #4a3a24;
-  --color-primary-strong: #2e2318;
-  --color-primary-soft: #8c6524;
-  --color-primary-tint: #fffdf7;
+  /* RGB channels for translucent overlays (same palette, no extra hues) */
+  --rgb-text: 51 41 31;
+  --rgb-accent: 160 112 63;
+  --rgb-accent-pressed: 181 143 105;
+  --rgb-inverse: 42 41 31;
+  --rgb-background: 244 237 227;
+  --rgb-raised: 248 245 240;
+  --rgb-tint: 234 222 207;
+  --rgb-border: 200 190 174;
 
-  --color-accent: #6b450e;
-  --color-accent-soft: #d9a441;
-  --color-accent-tint: #fdf9ef;
+  /* semantic aliases */
+  --background: var(--palette-background);
+  --foreground: var(--palette-text);
 
-  --color-brand-cream: #fffefb;
-  --color-brand-gold: #6b450e;
-  --color-footer: #17100a;
-  --color-ink: #292524;
-  --color-head-ink: #0c0a09;
-  --color-body-ink: #1c1917;
-  --color-muted: #4a433a;
-  --color-faint: #655c50;
-  --color-line: #f0ebe2;
-  --color-hero-bg: #fffefb;
-  --color-pill-bg: #fdf9f0;
-  --color-pill-ink: #4f360c;
-  --color-fun-bg: #1a140c;
-  --color-fun-ink: #120d07;
-  --color-surface: #fffdf9;
-  --color-terminal: #241b10;
+  --color-primary: var(--palette-accent);
+  --color-primary-strong: var(--palette-inverse);
+  --color-primary-soft: var(--palette-accent-hover);
+  --color-primary-tint: var(--palette-tint);
 
-  --gradient-primary: linear-gradient(135deg, #3a2b18 0%, #6b4e24 100%);
-  --gradient-primary-hover: linear-gradient(135deg, #2e2318 0%, #4a3a24 100%);
-  --gradient-heading: linear-gradient(120deg, #0c0a09 0%, #3d2a10 55%, #7a5618 100%);
-  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #fffefb 48%, #fffdf6 100%);
-  --gradient-accent: linear-gradient(90deg, #4a3a24 0%, #c0994e 100%);
-  --gradient-card: linear-gradient(160deg, #ffffff 0%, #fffdf8 100%);
+  --color-accent: var(--palette-accent);
+  --color-accent-soft: var(--palette-accent-pressed);
+  --color-accent-tint: var(--palette-tint);
+  --color-on-accent: var(--palette-on-accent);
+  --color-accent-hover: var(--palette-accent-hover);
+  --color-accent-pressed: var(--palette-accent-pressed);
 
-  --shadow-card: 0 1px 2px rgb(28 25 23 / 0.05), 0 12px 32px -24px rgb(28 25 23 / 0.32);
-  --shadow-card-hover: 0 20px 48px -28px rgb(58 43 24 / 0.42);
-  --shadow-button: 0 10px 24px -14px rgb(74 58 36 / 0.65);
-  --ring-focus: #a9803f;
+  --color-brand-cream: var(--palette-background);
+  --color-brand-gold: var(--palette-accent);
+  --color-footer: var(--palette-inverse);
+  --color-ink: var(--palette-text);
+  --color-head-ink: var(--palette-text);
+  --color-body-ink: var(--palette-text);
+  --color-muted: var(--palette-muted);
+  --color-faint: var(--palette-muted-on-fill);
+  --color-line: var(--palette-border);
+  --color-control-border: var(--palette-control-border);
+  --color-hero-bg: var(--palette-raised);
+  --color-pill-bg: var(--palette-tint);
+  --color-pill-ink: var(--palette-tint-text);
+  --color-fun-bg: var(--palette-inverse);
+  --color-fun-ink: var(--palette-inverse);
+  --color-surface: var(--palette-surface);
+  --color-raised: var(--palette-raised);
+  --color-tint: var(--palette-tint);
+  --color-tint-text: var(--palette-tint-text);
+  --color-terminal: var(--palette-inverse);
+  --color-inverse: var(--palette-inverse);
+  --color-inverse-text: var(--palette-inverse-text);
+
+  --gradient-primary: linear-gradient(135deg, var(--palette-accent) 0%, var(--palette-accent-pressed) 100%);
+  --gradient-primary-hover: linear-gradient(135deg, var(--palette-accent-hover) 0%, var(--palette-accent) 100%);
+  --gradient-heading: linear-gradient(120deg, var(--palette-text) 0%, var(--palette-tint-text) 55%, var(--palette-accent) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--palette-raised) 0%, var(--palette-background) 48%, var(--palette-tint) 100%);
+  --gradient-accent: linear-gradient(90deg, var(--palette-accent) 0%, var(--palette-accent-pressed) 100%);
+  --gradient-card: linear-gradient(160deg, var(--palette-raised) 0%, var(--palette-tint) 100%);
+
+  --shadow-card: 0 1px 2px rgb(var(--rgb-text) / 0.05), 0 12px 32px -24px rgb(var(--rgb-text) / 0.32);
+  --shadow-card-hover: 0 20px 48px -28px rgb(var(--rgb-text) / 0.42);
+  --shadow-button: 0 10px 24px -14px rgb(var(--rgb-accent) / 0.65);
+  --ring-focus: var(--palette-focus);
 }
 
 @theme inline {
@@ -63,6 +104,9 @@
   --color-accent: var(--color-accent);
   --color-accent-soft: var(--color-accent-soft);
   --color-accent-tint: var(--color-accent-tint);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-pressed: var(--color-accent-pressed);
+  --color-on-accent: var(--color-on-accent);
   --color-ink: var(--color-ink);
   --color-muted: var(--color-muted);
   --color-hero: var(--color-hero-bg);
@@ -74,9 +118,15 @@
   --color-head: var(--color-head-ink);
   --color-faint: var(--color-faint);
   --color-line: var(--color-line);
+  --color-control-border: var(--color-control-border);
   --color-fun: var(--color-fun-bg);
   --color-surface: var(--color-surface);
+  --color-raised: var(--color-raised);
+  --color-tint: var(--color-tint);
+  --color-tint-text: var(--color-tint-text);
   --color-terminal: var(--color-terminal);
+  --color-inverse: var(--color-inverse);
+  --color-inverse-text: var(--color-inverse-text);
   --font-serif: var(--font-playfair);
   --font-display: var(--font-poppins);
   --font-sans: var(--font-instrument);
@@ -98,8 +148,8 @@ body {
 }
 
 ::selection {
-  background: rgb(217 164 65 / 0.28);
-  color: var(--color-head-ink);
+  background: rgb(var(--rgb-accent-pressed) / 0.35);
+  color: var(--palette-text);
 }
 
 :focus-visible {
@@ -116,14 +166,14 @@ body {
 }
 
 .text-gradient-primary {
-  background-image: linear-gradient(120deg, #1a120a 0%, #6b450e 100%);
+  background-image: linear-gradient(120deg, var(--palette-text) 0%, var(--palette-accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient-light {
-  background-image: linear-gradient(120deg, #ffffff 20%, #f0deb4 100%);
+  background-image: linear-gradient(120deg, var(--palette-inverse-text) 20%, var(--palette-accent-pressed) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -193,6 +243,7 @@ body {
     transform var(--dur-quick) var(--ease-exit),
     box-shadow var(--dur-quick) var(--ease-exit),
     background-color var(--dur-quick) var(--ease-exit),
+    background-image var(--dur-quick) var(--ease-exit),
     border-color var(--dur-quick) var(--ease-exit),
     color var(--dur-quick) var(--ease-exit);
 }
@@ -206,27 +257,34 @@ body {
 }
 
 .btn-primary {
+  background-color: var(--palette-accent);
   background-image: var(--gradient-primary);
-  color: #fffefb;
+  color: var(--palette-on-accent);
   box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
+  background-color: var(--palette-accent-hover);
   background-image: var(--gradient-primary-hover);
-  box-shadow: 0 14px 30px -14px rgb(46 35 24 / 0.72);
+  box-shadow: 0 14px 30px -14px rgb(var(--rgb-accent) / 0.72);
   transition-duration: var(--dur-standard);
+}
+
+.btn-primary:active {
+  background-color: var(--palette-accent-pressed);
+  background-image: none;
 }
 
 .btn-secondary {
   border: 1px solid var(--color-line);
-  background-color: rgb(255 254 251 / 0.72);
+  background-color: rgb(var(--rgb-raised) / 0.72);
   color: var(--color-head-ink);
 }
 
 .btn-secondary:hover {
-  border-color: rgb(138 90 18 / 0.28);
-  background-color: #fffdf6;
-  color: var(--color-primary-strong);
+  border-color: var(--palette-control-border);
+  background-color: var(--palette-raised);
+  color: var(--palette-text);
 }
 
 .nav-link {
@@ -263,10 +321,10 @@ body {
 
 .hero-panel {
   position: relative;
-  border: 1px solid rgb(138 90 18 / 0.08);
+  border: 1px solid var(--palette-border);
   background-color: var(--color-hero-bg);
   background-image: var(--gradient-hero);
-  box-shadow: 0 24px 70px -48px rgb(58 43 24 / 0.45);
+  box-shadow: 0 24px 70px -48px rgb(var(--rgb-text) / 0.45);
 }
 
 .hero-panel::before {
@@ -275,13 +333,13 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(520px 320px at 78% 18%, rgb(176 138 79 / 0.12), transparent 70%),
-    radial-gradient(420px 260px at 12% 88%, rgb(176 138 79 / 0.1), transparent 70%);
+    radial-gradient(520px 320px at 78% 18%, rgb(var(--rgb-accent) / 0.12), transparent 70%),
+    radial-gradient(420px 260px at 12% 88%, rgb(var(--rgb-accent) / 0.1), transparent 70%);
 }
 
 .assistant-card {
-  border: 1px solid rgb(138 90 18 / 0.12);
-  background-image: linear-gradient(135deg, #fffefb 0%, #fffdf7 55%, #fdf9ee 100%);
+  border: 1px solid var(--palette-border);
+  background-image: linear-gradient(135deg, var(--palette-raised) 0%, var(--palette-background) 55%, var(--palette-tint) 100%);
   box-shadow: var(--shadow-card);
 }
 
@@ -298,7 +356,7 @@ body {
 
 .system-card:hover {
   transform: translateY(-4px);
-  border-color: rgb(138 90 18 / 0.22);
+  border-color: var(--palette-control-border);
   box-shadow: var(--shadow-card-hover);
   transition-duration: var(--dur-standard);
   transition-timing-function: var(--ease-enter);
@@ -311,22 +369,22 @@ body {
   flex-shrink: 0;
   border-radius: 999px;
   background-image: var(--gradient-accent);
-  box-shadow: 0 0 0 3px rgb(176 138 79 / 0.16);
+  box-shadow: 0 0 0 3px rgb(var(--rgb-accent) / 0.16);
 }
 
 .fun-panel {
-  border: 1px solid rgb(255 255 255 / 0.08);
+  border: 1px solid rgb(var(--rgb-background) / 0.12);
   background-color: var(--color-fun-bg);
   background-image:
-    radial-gradient(640px 360px at 88% 8%, rgb(217 164 65 / 0.2), transparent 68%),
-    radial-gradient(480px 280px at 8% 92%, rgb(217 164 65 / 0.16), transparent 68%);
+    radial-gradient(640px 360px at 88% 8%, rgb(var(--rgb-accent) / 0.22), transparent 68%),
+    radial-gradient(480px 280px at 8% 92%, rgb(var(--rgb-accent-pressed) / 0.16), transparent 68%);
 }
 
 .site-footer {
   background-color: var(--color-footer);
   background-image:
-    radial-gradient(700px 380px at 88% 0%, rgb(217 164 65 / 0.22), transparent 65%),
-    radial-gradient(520px 300px at 4% 100%, rgb(217 164 65 / 0.1), transparent 65%);
+    radial-gradient(700px 380px at 88% 0%, rgb(var(--rgb-accent) / 0.22), transparent 65%),
+    radial-gradient(520px 300px at 4% 100%, rgb(var(--rgb-accent-pressed) / 0.1), transparent 65%);
 }
 
 .decision-card {
@@ -337,8 +395,8 @@ body {
 
 .chat-bubble-user {
   background-image: var(--gradient-primary);
-  color: #fffefb;
-  box-shadow: 0 10px 22px -18px rgb(46 35 24 / 0.6);
+  color: var(--palette-on-accent);
+  box-shadow: 0 10px 22px -18px rgb(var(--rgb-accent) / 0.6);
 }
 
 /* ---------- load-in: hero children rise one after another ---------- */
@@ -371,7 +429,7 @@ body {
 
 /* ---------- cards ---------- */
 .card {
-  border: 1px solid rgb(28 25 23 / 0.06);
+  border: 1px solid var(--palette-border);
   box-shadow: var(--shadow-card);
   transition:
     transform var(--dur-quick) var(--ease-exit),
@@ -380,7 +438,7 @@ body {
 }
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgb(138 90 18 / 0.2);
+  border-color: var(--palette-control-border);
   box-shadow: var(--shadow-card-hover);
   transition-timing-function: var(--ease-enter);
   transition-duration: var(--dur-standard);
@@ -411,8 +469,8 @@ button:hover .arrow {
   50% { opacity: 0; }
 }
 @keyframes ring {
-  0% { box-shadow: 0 0 0 0 rgb(138 90 18 / 0.34); }
-  100% { box-shadow: 0 0 0 12px rgb(138 90 18 / 0); }
+  0% { box-shadow: 0 0 0 0 rgb(var(--rgb-accent) / 0.34); }
+  100% { box-shadow: 0 0 0 12px rgb(var(--rgb-accent) / 0); }
 }
 @keyframes nudge {
   0%, 100% { transform: translateX(0); }

@@ -1,6 +1,8 @@
 // All personal content lives here. Source: Reza Habibi CV.
 // Items marked PLACEHOLDER are not in the CV yet; replace them with real details.
 
+import { palette } from "@/lib/palette";
+
 export type Decision = { title: string; text: string; art: Art };
 export type Art = "commerce" | "stream" | "film" | "ledger" | "api" | "deploy";
 
@@ -70,8 +72,8 @@ export const projects: Project[] = [
     blurb:
       "Backend services for a movie catalogue, live streaming and an encoding pipeline that keeps processing and delivery smooth.",
     stack: ["NestJS", "FFmpeg", "Redis", "Docker"],
-    bg: "#fcf9f2",
-    ink: "#4a3418",
+    bg: palette.surface,
+    ink: palette.text,
     art: "film",
     headline:
       "A video platform where uploads, encodes and live streams share one backend.",
@@ -119,8 +121,8 @@ export const projects: Project[] = [
     blurb:
       "A Mediasoup media server for live streaming with low latency and stable real-time delivery, plus the REST and GraphQL APIs around it.",
     stack: ["Mediasoup", "WebRTC", "GraphQL", "Node.js"],
-    bg: "#fffdf8",
-    ink: "#5a431c",
+    bg: palette.raised,
+    ink: palette.tintText,
     art: "stream",
     headline:
       "Live streams that stay live: a Mediasoup media server built for low latency.",
@@ -168,8 +170,8 @@ export const projects: Project[] = [
     blurb:
       "Scalable services for carpet and retail online shops and a local accounting system, with secure APIs built for performance and clean architecture.",
     stack: ["REST", "GraphQL", "TypeORM", "SQL"],
-    bg: "#fdfaf4",
-    ink: "#4e3a1c",
+    bg: palette.tint,
+    ink: palette.text,
     art: "commerce",
     headline:
       "Online shops and a local accounting system on one clean, secure API foundation.",
@@ -239,22 +241,22 @@ export const playground = [
   {
     title: "Rate limits that forgive",
     text: "A Redis token-bucket limiter that lets short bursts through and still protects the API.",
-    bg: "#fbf7ef",
+    bg: palette.raised,
   },
   {
     title: "Zero-downtime deploys",
     text: "Nginx, Docker and PM2 together so a release never drops a request.",
-    bg: "#f8f6ee",
+    bg: palette.surface,
   },
   {
     title: "Same schema, two ORMs",
     text: "One data model in TypeORM and Prisma, compared on migrations, typing and query output.",
-    bg: "#fdfbf5",
+    bg: palette.tint,
   },
   {
     title: "Load-testing a live room",
     text: "Simulated participants against a Mediasoup room to find where quality starts to drop.",
-    bg: "#fffefb",
+    bg: palette.background,
   },
 ];
 

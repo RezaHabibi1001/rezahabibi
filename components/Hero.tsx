@@ -54,7 +54,7 @@ export default function Hero() {
               <div className="absolute -inset-x-[8%] bottom-0 h-[70%] rounded-t-full bg-primary/10 blur-2xl" />
             </div>
           </div>
-          <div className="rise relative z-10 w-full max-w-[420px] drop-shadow-[0_28px_48px_rgba(46,35,24,0.22)]">
+          <div className="rise relative z-10 w-full max-w-[420px] drop-shadow-[0_28px_48px_rgba(51,41,31,0.22)]">
             <Image
               style={i(2)}
               src="/og-portrait.jpeg"

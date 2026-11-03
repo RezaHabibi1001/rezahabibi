@@ -56,13 +56,13 @@ export default function WorkPage() {
 
       {/* Fun time */}
       <section className="mx-auto mt-24 w-full max-w-[1440px] px-5 sm:px-10">
-        <div className="fun-panel rounded-[28px] px-6 py-14 text-brand sm:px-12 sm:py-20">
+        <div className="fun-panel rounded-[28px] px-6 py-14 text-inverse-text sm:px-12 sm:py-20">
           <Reveal className="flex flex-col gap-3">
             <span className="eyebrow eyebrow-light">Playground</span>
             <h2 className="font-display text-3xl font-medium sm:text-4xl">
               My fun time
             </h2>
-            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-brand/85">
+            <p className="max-w-2xl font-display text-[15px] leading-relaxed text-inverse-text/85">
               Small experiments I run to learn something properly, outside
               client work.
             </p>
@@ -111,7 +111,7 @@ export default function WorkPage() {
                 width={640}
                 height={626}
                 sizes="(min-width: 1024px) 384px, 90vw"
-                className="relative z-10 block h-auto w-full drop-shadow-[0_28px_48px_rgba(46,35,24,0.22)]"
+                className="relative z-10 block h-auto w-full drop-shadow-[0_28px_48px_rgba(51,41,31,0.22)]"
               />
             </div>
           </Reveal>
@@ -130,7 +130,7 @@ export default function WorkPage() {
             ))}
             <Link
               href="/resume"
-              className="font-ui text-sm font-semibold text-accent transition-colors duration-200 hover:text-primary"
+              className="font-ui text-sm font-semibold text-accent transition-colors duration-200 hover:text-accent-hover"
             >
               Read my resume <span className="arrow">&rarr;</span>
             </Link>

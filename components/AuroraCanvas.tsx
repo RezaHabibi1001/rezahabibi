@@ -2,11 +2,12 @@
 
 import { useEffect, useRef } from "react";
 
+/* RGB from palette: accent, accentPressed, accentHover, tintText */
 const BLOBS = [
-  { c: [138, 90, 18], r: 0.55, ax: 0.35, ay: 0.4, fx: 0.00021, fy: 0.00033, p: 0 },
-  { c: [217, 164, 65], r: 0.45, ax: 0.3, ay: 0.5, fx: 0.00017, fy: 0.00027, p: 2 },
-  { c: [176, 138, 79], r: 0.35, ax: 0.4, ay: 0.35, fx: 0.00025, fy: 0.00019, p: 4 },
-  { c: [83, 62, 30], r: 0.5, ax: 0.25, ay: 0.45, fx: 0.00013, fy: 0.00023, p: 1 },
+  { c: [160, 112, 63], r: 0.55, ax: 0.35, ay: 0.4, fx: 0.00021, fy: 0.00033, p: 0 },
+  { c: [181, 143, 105], r: 0.45, ax: 0.3, ay: 0.5, fx: 0.00017, fy: 0.00027, p: 2 },
+  { c: [171, 129, 86], r: 0.35, ax: 0.4, ay: 0.35, fx: 0.00025, fy: 0.00019, p: 4 },
+  { c: [130, 91, 51], r: 0.5, ax: 0.25, ay: 0.45, fx: 0.00013, fy: 0.00023, p: 1 },
 ];
 
 // Soft drifting gradient blobs on Lissajous paths. Paused when off screen.

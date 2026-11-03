@@ -45,7 +45,7 @@ function validate(values: { name: string; email: string; message: string }): Err
 }
 
 const fieldClass =
-  "w-full rounded-xl border bg-brand px-4 font-display text-base text-head outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-faint hover:border-accent/40 focus:border-primary focus:shadow-[0_0_0_3px_rgb(169_128_63_/_0.28)]";
+  "w-full rounded-xl border border-control-border bg-raised px-4 font-display text-base text-head outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-faint hover:border-accent/40 focus:border-accent focus:shadow-[0_0_0_3px_rgb(160_112_63_/_0.28)]";
 
 export default function ContactForm() {
   const [topic, setTopic] = useState<TopicId>("role");
@@ -142,7 +142,7 @@ export default function ContactForm() {
       {errorList.length > 0 && (
         <div
           role="alert"
-          className="flex flex-col gap-1.5 rounded-2xl border border-accent/30 bg-brand px-4 py-4"
+          className="flex flex-col gap-1.5 rounded-2xl border border-accent/30 bg-raised px-4 py-4"
         >
           <strong className="font-ui text-sm font-semibold text-head">
             Please fix {errorList.length === 1 ? "1 field" : `${errorList.length} fields`} before
@@ -151,7 +151,7 @@ export default function ContactForm() {
           <ul className="list-disc space-y-1 pl-5 font-ui text-sm leading-relaxed text-ink">
             {errorList.map((err) => (
               <li key={err.id}>
-                <a href={`#${err.id}`} className="underline underline-offset-3 hover:text-primary">
+                <a href={`#${err.id}`} className="underline underline-offset-3 hover:text-accent-hover">
                   {err.text}
                 </a>
               </li>
@@ -172,8 +172,8 @@ export default function ContactForm() {
                 key={t.id}
                 className={`relative inline-flex min-h-11 cursor-pointer items-center gap-2.5 rounded-full border px-4 font-ui text-sm transition-colors duration-200 ${
                   on
-                    ? "border-primary-strong bg-primary-strong text-brand"
-                    : "border-line bg-transparent text-head hover:border-accent/40"
+                    ? "border-inverse bg-inverse text-inverse-text"
+                    : "border-control-border bg-transparent text-head hover:border-accent/40"
                 }`}
               >
                 <input
@@ -187,7 +187,7 @@ export default function ContactForm() {
                 <span
                   aria-hidden
                   className={`h-2 w-2 rounded-full border ${
-                    on ? "border-brand bg-brand" : "border-accent/50 bg-transparent"
+                    on ? "border-raised bg-raised" : "border-accent/50 bg-transparent"
                   }`}
                 />
                 {t.label}
@@ -213,7 +213,7 @@ export default function ContactForm() {
             aria-invalid={errors.name ? true : undefined}
             aria-describedby={errors.name ? "f-name-err" : undefined}
             className={`${fieldClass} min-h-[52px] ${
-              errors.name ? "border-head" : "border-line"
+              errors.name ? "border-head" : "border-control-border"
             }`}
           />
           {errors.name && (
@@ -239,7 +239,7 @@ export default function ContactForm() {
             aria-invalid={errors.email ? true : undefined}
             aria-describedby={errors.email ? "f-email-err" : undefined}
             className={`${fieldClass} min-h-[52px] ${
-              errors.email ? "border-head" : "border-line"
+              errors.email ? "border-head" : "border-control-border"
             }`}
           />
           {errors.email && (
@@ -261,7 +261,7 @@ export default function ContactForm() {
           autoComplete="organization"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
-          className={`${fieldClass} min-h-[52px] border-line`}
+          className={`${fieldClass} min-h-[52px] border-control-border`}
         />
       </div>
 
@@ -288,7 +288,7 @@ export default function ContactForm() {
             errors.message ? "f-message-hint f-message-err" : "f-message-hint"
           }
           className={`${fieldClass} min-h-40 resize-y py-3.5 leading-relaxed ${
-            errors.message ? "border-head" : "border-line"
+            errors.message ? "border-head" : "border-control-border"
           }`}
         />
         {errors.message && (

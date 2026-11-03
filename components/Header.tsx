@@ -18,7 +18,7 @@ export default function Header() {
   const contactActive = isActive(pathname, "/contact");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-brand/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-5 sm:px-10">
         <Link
           href="/"
@@ -26,7 +26,7 @@ export default function Header() {
           aria-label={`${site.name} home`}
           aria-current={pathname === "/" ? "page" : undefined}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-[9px] bg-gradient-to-br from-primary-strong to-primary font-serif text-sm font-semibold tracking-tight text-brand shadow-[0_8px_18px_-12px_rgb(46_35_24_/_0.7)]">
+          <span className="flex h-9 w-9 items-center justify-center rounded-[9px] bg-gradient-to-br from-inverse to-accent font-serif text-sm font-semibold tracking-tight text-inverse-text shadow-[0_8px_18px_-12px_rgb(42_41_31_/_0.7)]">
             {site.monogram}
           </span>
         </Link>

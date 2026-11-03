@@ -48,11 +48,11 @@ export default function ResumePage() {
           </h2>
           <p style={i(2)} className="mt-4 font-ui text-sm text-muted">
             {site.location} ·{" "}
-            <a href={`mailto:${site.email}`} className="transition-colors duration-200 hover:text-primary">
+            <a href={`mailto:${site.email}`} className="transition-colors duration-200 hover:text-accent-hover">
               {site.email}
             </a>{" "}
             ·{" "}
-            <a href={`tel:${site.phoneHref}`} className="transition-colors duration-200 hover:text-primary">
+            <a href={`tel:${site.phoneHref}`} className="transition-colors duration-200 hover:text-accent-hover">
               {site.phone}
             </a>
           </p>

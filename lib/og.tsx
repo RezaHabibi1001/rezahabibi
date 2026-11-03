@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ImageResponse } from "next/og";
 import { site } from "@/content/site";
+import { palette } from "@/lib/palette";
 
 export const OG_SIZE = { width: 1200, height: 630 };
 
@@ -21,11 +22,18 @@ type Card = {
 };
 
 /** Shared 1200x630 social card used by every opengraph-image / twitter-image route. */
-export async function renderOg({ eyebrow, title, subtitle, bg = "#fdfaf4", ink = "#7a4e0a", withPortrait = true }: Card) {
+export async function renderOg({
+  eyebrow,
+  title,
+  subtitle,
+  bg = palette.raised,
+  ink = palette.tintText,
+  withPortrait = true,
+}: Card) {
   const img = withPortrait ? await portraitDataUrl() : null;
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#fffefb", padding: 40 }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: palette.background, padding: 40 }}>
         <div
           style={{
             flex: 1,
@@ -49,23 +57,23 @@ export async function renderOg({ eyebrow, title, subtitle, bg = "#fdfaf4", ink =
               {eyebrow}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-              <div style={{ display: "flex", fontSize: title.length > 48 ? 54 : 66, lineHeight: 1.1, color: "#1c1917" }}>
+              <div style={{ display: "flex", fontSize: title.length > 48 ? 54 : 66, lineHeight: 1.1, color: palette.text }}>
                 {title}
               </div>
               {subtitle ? (
-                <div style={{ display: "flex", fontSize: 28, lineHeight: 1.35, color: "#44403c", opacity: 0.85 }}>
+                <div style={{ display: "flex", fontSize: 28, lineHeight: 1.35, color: palette.muted, opacity: 0.95 }}>
                   {subtitle}
                 </div>
               ) : null}
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, color: "#3f3a33" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, color: palette.mutedOnFill }}>
               <div
                 style={{
                   width: 52,
                   height: 52,
                   borderRadius: 14,
-                  background: "#241b10",
-                  color: "#fffefb",
+                  background: palette.inverse,
+                  color: palette.inverseText,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",

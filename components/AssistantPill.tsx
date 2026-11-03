@@ -49,7 +49,7 @@ export default function AssistantPill() {
       <AuroraCanvas className="opacity-40" />
       <div className="relative flex flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div className="flex items-center gap-4">
-          <span className="beat grid h-12 w-12 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-[#f0deb4]">
+          <span className="beat grid h-12 w-12 shrink-0 place-items-center rounded-full bg-terminal font-mono text-sm text-accent-pressed">
             {"{ }"}
           </span>
           <div>
