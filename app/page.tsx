@@ -1,6 +1,7 @@
 import AssistantPill from "@/components/AssistantPill";
 import Hero from "@/components/Hero";
 import JsonLd from "@/components/JsonLd";
+import MarscodersJourney from "@/components/MarscodersJourney";
 import ProjectGrid from "@/components/ProjectGrid";
 import Reveal from "@/components/Reveal";
 import SystemsList from "@/components/SystemsList";
@@ -32,6 +33,7 @@ export default function Home() {
       </section>
 
       <ProjectGrid id="work" heading="Projects I have built" />
+      <MarscodersJourney />
       <SystemsList />
     </main>
   );

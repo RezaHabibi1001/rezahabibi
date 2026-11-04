@@ -212,6 +212,36 @@ export const projects: Project[] = [
   },
 ];
 
+// Professional affiliation highlighted on the home page.
+export const marscoders = {
+  name: "MARS Coders",
+  url: "https://www.marscoders.tech",
+  logo: "/marscoders-logo.png",
+  role: "Full-Stack Developer",
+  status: "Currently collaborating",
+  period: "Present",
+  eyebrow: "Professional journey",
+  heading: "My Professional Journey at Marscoders",
+  intro:
+    "I am currently collaborating with the MARS Coders team as a Full-Stack Developer. Day to day I help design, build and ship the products the studio delivers for clients — including work featured on their website.",
+  companyBlurb:
+    "A Herat-based development studio building custom websites and mobile apps — from MVPs to full platforms — with a focus on clean engineering and real user needs.",
+  contributions: [
+    {
+      title: "Studio projects",
+      text: "Actively developing and contributing to products featured on the Marscoders website, across web platforms and client work.",
+    },
+    {
+      title: "Full-stack delivery",
+      text: "Working across the stack: APIs and services, application logic, and the interfaces people use day to day.",
+    },
+    {
+      title: "Multiple engagements",
+      text: "Contributing across several live projects with the same habits I bring to every role — clear architecture, careful data, and calm under load.",
+    },
+  ],
+};
+
 // Home "systems" list, mirrors the reference's enterprise list.
 export const systems = [
   {
